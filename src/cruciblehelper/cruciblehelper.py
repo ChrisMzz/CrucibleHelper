@@ -2,6 +2,26 @@ from dataclasses import dataclass
 import yaml
 from pathlib import Path
 
+def handle_collision(collision):
+    if type(collision) == dict:
+        return collision["data"]
+    return collision
+
+def handle_selfcollision(selfCollision, collision):
+    if type(selfCollision) == str: return selfCollision
+    if "data" in selfCollision.keys(): return selfCollision["data"]
+    if "scale" in selfCollision.keys():
+        sx, sy = selfCollision["scale"].split(",")
+        sx, sy = float(sx), float(sy)
+        if type(collision) == dict: collision : str = collision["data"]
+        P1 = collision.split(" ")
+        P2 = [float(p) for p in P1 if p not in ["M", "L"]]
+        P3 = [p for p in P1 if p in ["M", "L"]]
+        P4 = [[pml,px,py] for pml,px,py in zip(P3, [round(p*sx, 4) for p in P2[::2]], [round(p*sy, 4) for p in P2[1::2]])]
+        return [str(p) for P in P4 for p in P]
+
+
+
 @dataclass
 class CollisionDrawer: 
     output_filename:str
@@ -9,10 +29,6 @@ class CollisionDrawer:
     collision:str
     selfCollision:str=""
     stroke:str="ff0000"
-    
-    # TODO : 
-    #   - unpack potential dicts in collision objects
-    #   - handle * and & references by copying the correct path
 
     @property
     def svg(self):
@@ -62,22 +78,22 @@ class Ingredient:
         self.isTeleportationIngredient = data["isTeleportationIngredient"]
         self.path = data["path"]
     
-    def draw_stack_items(self, single=True) -> list[list[CollisionDrawer]]: # TODO : handle * and & references
+    def draw_stack_items(self, single=True) -> list[list[CollisionDrawer]]: 
         calls = []
         for stackItem in self.stackItems:
             if "selfCollision" in stackItem.keys():
                 calls.append([CollisionDrawer(
                     output_filename=stackItem["sprite"], 
                     sprite=self.file.parent/stackItem["sprite"],
-                    collision=stackItem["collision"],
-                    selfCollision=stackItem["selfCollision"],
+                    collision=handle_collision(stackItem["collision"]),
+                    selfCollision=handle_selfcollision(stackItem["selfCollision"], stackItem["collision"]),
                     stroke=self.groundColor[1:]
                 )])
             else:
                 calls.append([CollisionDrawer(
                     output_filename=stackItem["sprite"], 
                     sprite=self.file.parent/stackItem["sprite"],
-                    collision=stackItem["collision"],
+                    collision=handle_collision(stackItem["collision"]),
                     stroke=self.groundColor[1:]
                 )])
             while "grindsInto" in stackItem.keys():
@@ -86,15 +102,15 @@ class Ingredient:
                     calls[-1] += [CollisionDrawer(
                         output_filename=stackItem["sprite"], 
                         sprite=self.file.parent/stackItem["sprite"],
-                        collision=stackItem["collision"],
-                        selfCollision=stackItem["selfCollision"],
+                        collision=handle_collision(stackItem["collision"]),
+                        selfCollision=handle_selfcollision(stackItem["selfCollision"], stackItem["collision"]),
                         stroke=self.groundColor[1:]
                     )]
                 else:
                     calls[-1] += [CollisionDrawer(
                         output_filename=stackItem["sprite"], 
                         sprite=self.file.parent/stackItem["sprite"],
-                        collision=stackItem["collision"],
+                        collision=handle_collision(stackItem["collision"]),
                         stroke=self.groundColor[1:]
                     )]
             if single: break
