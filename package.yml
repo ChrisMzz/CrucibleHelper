@@ -1,0 +1,2222 @@
+name: JKNewIngredients
+author: Jenkkrystal
+version: 1.2.0
+
+dependencies:
+  - bepInExGUID: net.RoboPhredDev.PotionCraft.Crucible.Ingredients
+
+ingredients:
+  - name:
+      en: Flaming Tentacle
+      es: Tentáculo Llameante
+    id: TENTACULOLLAMEANTE
+    description: 
+      en: Clathrus Fammeum. Traps and digests insects with its tentacular protrusions. It secretes orange juices with a nice smell, which are highly desired by the best cooks. They are used to make sauces to flavour bushmeat.
+      es: Clathrus Fammeum. Atrapa y digiere insectos con sus protuberancias tentaculares. Segrega unos jugos anaranjados de agradable olor, que son altamente deseados por los mejores cocineros. Se utilizan para la elaboración de salsas para acompañar la carne de caza.
+    ingredientListIcon: taculo_icon.png
+    inventoryImage: taculo_inv.png
+    recipeStepImage: taculo_rec.png
+    inheritFrom: Lavaroot
+    basePrice: 10.8
+    stackItems:
+      - &taculo
+        sprite: taculo_stack_1.png
+        collision: M 0 0.56 L 0.25 0.43 L 0.31 0.32 L 0.21 -0.35 L 0.15 -0.5 L 0.1 -0.56 L -0.25 -0.29 L -0.33 0.3 L -0.29 0.39 L -0.21 0.47
+        grindsInto:
+          - sprite: taculo_stack_2.png
+            collision: M 0 0.54 L 0.1 0.53 L 0.29 0.38 L 0.3 0.25 L 0.21 -0.36 L 0.16 -0.44 L -0.2 -0.21 L -0.34 0.29 L -0.27 0.4 L -0.18 0.49
+            grindsInto:
+              - sprite: taculo_stack_3.png
+                collision: M 0.09 0.51 L 0.21 0.45 L 0.26 0.3 L 0.24 0.11 L 0.2 -0.27 L 0.14 -0.29 L -0.17 -0.16 L -0.29 0.21 L -0.27 0.38 L -0.18 0.49 L -0.02 0.53
+                grindsInto:
+                  - sprite: taculo_stack_4.png
+                    collision: M 0.01 0.51 L 0.19 0.43 L 0.23 0.37 L 0.24 0.21 L 0.17 -0.2 L 0.1 -0.23 L -0.1 -0.16 L -0.17 -0.09 L -0.23 0.08 L -0.25 0.18 L -0.24 0.34 L -0.2 0.43 L -0.11 0.49
+                    grindsInto:
+                      - sprite: taculo_stack_5.png
+                        collision: M -0.11 0.46 L 0 0.46 L 0.16 0.4 L 0.22 0.33 L 0.17 -0.02 L 0.11 -0.11 L 0.03 -0.15 L -0.09 -0.11 L -0.16 -0.06 L -0.22 0.08 L -0.24 0.22 L -0.21 0.37
+                        grindsInto:
+                          - sprite: taculo_stack_6.png
+                            collision: M -0.02 0.42 L 0.1 0.4 L 0.15 0.31 L 0.16 0.14 L -0.01 -0.02 L -0.09 -0.05 L -0.17 0.02 L -0.18 0.24 L -0.15 0.38
+                            grindsInto:
+                              - sprite: taculo_stack_7.png
+                                collision: M -0.02 0.4 L 0.04 0.38 L 0.14 0.26 L 0.16 0.14 L -0.05 0.06 L -0.1 0.05 L -0.17 0.23 L -0.15 0.33
+                                grindsInto:
+                                  - sprite: taculo_stack_8.png
+                                    collision: M 0.01 0.28 L 0.13 0.2 L 0.06 0.11 L -0.04 0.08 L -0.13 0.15 L -0.13 0.22
+        positionInStack: -.4,0
+        angleInStack: -45
+      - <<: *taculo
+        positionInStack: -.2,0
+        angleInStack: -10
+      - <<: *taculo
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *taculo
+        positionInStack: .4,0
+        angleInStack: 45
+    groundColor: "#E27339"
+    soldBy:
+      - npcTag: IsMushroomer
+        chanceToAppear: .4
+        minCount: 7
+        maxCount: 23
+    grindStartPercent: .3
+    isTeleportationIngredient: false
+    path:
+      scale: 1,1
+      data: C 1.3 0.65 1.95 1.3 1.95 2.6 C 0.65 2.6 -0.65 2.6 -0.65 1.3 C -0.65 0 -1.3 -0.65 -1.95 -0.65 C -2.6 -0.65 -3.25 -1.3 -3.25 -1.95 C -3.25 -3.25 -3.68 -3.25 -3.9 -3.9
+  - name:
+      en: Barbuda
+      es: Barbuda
+    id: BARBUDA
+    description: 
+      en: Coprinus Comatus. Ephemeral fungus that must be consumed as soon as possible. Within hours of harvesting, a liquefaction process begins that will completely turn the fungus into a dark ink. Such ink can be used for writing.
+      es: Coprinus Comatus. Hongo efímero que debe ser consumido cuanto antes. A las pocas horas de haberlo cosechado, comienza un proceso de licuefacción que convertirá por completo el hongo en una tinta oscura. Dicha tinta puede emplearse para la escritura.
+    ingredientListIcon: coprinus_icon.png
+    inventoryImage: coprinus_inv.png
+    recipeStepImage: coprinus_rec.png
+    inheritFrom: Marshroom
+    basePrice: 8.4
+    stackItems:
+      - &coprinus
+        sprite: coprinus_stack_1.png
+        collision: &colcoprinus
+          data: M -0.01 0.47 L 0.21 0.2 L 0.18 -0.41 L -0.01 -0.54 L -0.17 -0.41 L -0.24 0.25
+        selfCollision: 
+          scale: 0.7,0.7
+        grindsInto:
+          - sprite: coprinus_stack_2.png
+            collision: *colcoprinus
+            selfCollision: 
+              scale: 0.7,0.7
+            grindsInto:
+              - sprite: coprinus_stack_3.png
+                collision: M -0.01 0.41 L 0.14 0.17 L 0.14 -0.3 L 0.02 -0.51 L -0.15 -0.25 L -0.16 0.23
+                selfCollision: 
+                  scale: 0.7,0.7
+                grindsInto:
+                  - sprite: coprinus_stack_4.png
+                    collision: M -0.01 0.41 L 0.14 0.17 L 0.14 -0.3 L 0.02 -0.51 L -0.15 -0.25 L -0.16 0.23
+                    selfCollision: 
+                      scale: 0.7,0.7
+                    grindsInto:
+                      - sprite: coprinus_stack_5.png
+                        collision: M -0.02 0.33 L 0.08 0.11 L 0.07 -0.32 L -0.1 -0.3 L -0.09 0.21
+                        selfCollision: 
+                          scale: 0.7,0.7
+                        grindsInto:
+                          - sprite: coprinus_stack_6.png
+                            collision: M -0.02 0.25 L 0.05 0.16 L -0.01 -0.31 L -0.07 -0.18 L -0.06 0.2
+                            grindsInto:
+                              - sprite: coprinus_stack_7.png
+                                collision: M 0 0.14 L 0.03 -0.13 L -0.01 -0.05
+                                grindsInto:
+                                  - sprite: coprinus_stack_8.png
+                                    collision: M 0 0.14 L 0.03 -0.13 L -0.01 -0.05
+        positionInStack: -.4, 0
+        angleInStack: 45
+      - <<: *coprinus
+        positionInStack:
+          x: -.2
+        angleInStack: 10
+      - <<: *coprinus
+        positionInStack: .2,0
+        angleInStack: -10
+      - <<: *coprinus
+        positionInStack: .4,0
+        angleInStack: -45
+      - <<: *coprinus
+        positionInStack: -.3,.1
+        angleInStack: 27
+      - <<: *coprinus
+        positionInStack: .3,.1
+        angleInStack: -27
+      - <<: *coprinus
+        positionInStack: -.3,0
+        angleInStack: 60
+      - <<: *coprinus
+        positionInStack: .3,0
+        angleInStack: -60
+      - <<: *coprinus
+        positionInStack: 0,.2
+        angleInStack: 0
+    groundColor: "#333A3D"
+    soldBy:
+      - npcTag: IsMushroomer
+        chanceToAppear: .3
+        minCount: 4
+        maxCount: 19
+    grindStartPercent: .3
+    isTeleportationIngredient: false
+    path:
+      scale: 1,-1
+      data: C -1 0 -1 -1 -2 -1 C -1.7 1.3 -2 4 -1 6 C -0.4 6.9 0.4 6.9 1 6
+  - name:
+      en: Bejín Cornudo
+      es: Bejín Cornudo
+    id: BEJINCORNUDO
+    description:
+      en: Lycoperdon Stinio. Its spikes can pierce the footwear of anyone slovenly walking through the forest.
+      es: Lycoperdon Stinio. Sus púas son capaces de atravesar el calzado de cualquiera que camine despistado por el bosque.
+    ingredientListIcon: pocho_icon.png
+    inventoryImage: pocho_inv.png
+    recipeStepImage: pocho_rec.png
+    inheritFrom: Lavaroot
+    isStackItemsSolid: true
+    basePrice: 10.6
+    stackItems:
+      - &bejinc
+        sprite: bejinc_stack_1.png
+        collision: M 0.24 0.57 L 0.6 0.29 L 0.48 -0.18 L 0.32 -0.45 L -0.35 -0.46 L -0.57 -0.35 L -0.61 0.35 L -0.25 0.56
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: bejinc_stack_2.png
+            collision: M 0.07 0.57 L 0.36 0.47 L 0.55 0.32 L 0.43 0 L 0.37 -0.14 L -0.35 -0.31 L -0.57 -0.28 L -0.54 0.41 L -0.15 0.54
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: bejinc_stack_3.png
+                collision: M -0.08 0.52 L 0.08 0.52 L 0.5 0.35 L 0.43 0.04 L 0.31 -0.07 L -0.3 -0.2 L -0.5 -0.09 L -0.51 0.3 L -0.42 0.42
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: bejinc_stack_4.png
+                    collision: M 0.08 0.49 L 0.47 0.36 L 0.43 0.09 L 0.29 -0.01 L -0.28 -0.16 L -0.44 -0.01 L -0.42 0.34 L -0.07 0.48
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: bejinc_stack_5.png
+                        collision: M 0.07 0.46 L 0.33 0.42 L 0.41 0.24 L 0.34 0.1 L 0.2 0.01 L -0.12 -0.09 L -0.29 -0.06 L -0.43 0.13 L -0.34 0.35 L -0.23 0.41
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: bejinc_stack_6.png
+                            collision: M 0.13 0.43 L 0.34 0.37 L 0.36 0.24 L 0.27 0.1 L 0.16 0.04 L -0.06 -0.03 L -0.3 -0.02 L -0.35 0.2 L -0.28 0.36
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: bejinc_stack_7.png
+                                collision: M 0.13 0.42 L 0.34 0.33 L 0.27 0.14 L 0.02 0.03 L -0.27 0.03 L -0.26 0.23 L -0.12 0.34
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: bejinc_stack_8.png
+                                    collision: M -0.04 0.34 L 0.21 0.34 L 0.3 0.23 L 0.01 0.07 L -0.17 0.09 L -0.25 0.16
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *bejinc
+        positionInStack: 0,0
+        angleInStack: 0
+      - <<: *bejinc
+        positionInStack: .4,0
+        angleInStack: 45
+      - <<: *bejinc
+        positionInStack: 0,0
+        angleInStack: 0
+    groundColor: "#AD9ACB"
+    soldBy:
+      - npcTag: IsMushroomer
+        chanceToAppear: .3
+        maxCount: 2
+        maxCount: 14
+    grindStartPercent: .38
+    isTeleportationIngredient: false
+    path:
+      data: C -5 0 -5 -4 -2 -4 C -2 -5 -2 -7 -1 -8 C -1.2 -7 -1.35 -6.03 -1 -5
+  - name:
+      en: Piñápita
+      es: Piñápita
+    id: PINAPITA
+    description:
+      en: Pitahaya Pinea. A fruit whose flesh has a strong sweet flavor. Highly appreciated for its important aphrodisiac properties, to the point of being able to resuscitate totally withered marriages.
+      es: Pitahaya Pinea. Un fruto cuya carne posee un sabor dulce muy potente. Muy apreciada debido a sus importantes propiedades afrodisiacas, hasta tal punto, de ser capaz de resucitar matrimonios totalmente marchitos.
+    ingredientListIcon: pitaya_icon.png
+    inventoryImage: pitaya_inv.png
+    recipeStepImage: pitaya_rec.png
+    inheritFrom: SulphurShelf
+    isStackItemsSolid: true
+    basePrice: 10.3
+    stackItems:
+      - &pinapita
+        sprite: pinapita_stack_1.png
+        collision: M -0.53 0.61 L 0.26 0.62 L 0.54 0.22 L 0.53 -0.48 L 0.39 -0.6 L 0.12 -0.61 L -0.34 -0.39 L -0.58 -0.07 L -0.59 0.28
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: pinapita_stack_2.png
+            collision: M -0.45 0.59 L -0.06 0.59 L 0.35 0.5 L 0.51 0.08 L 0.48 -0.49 L 0.28 -0.58 L -0.28 -0.42 L -0.54 -0.13 L -0.59 0.12
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: pinapita_stack_3.png
+                collision: M -0.16 0.6 L 0.26 0.51 L 0.45 0.28 L 0.48 -0.09 L 0.43 -0.5 L 0.15 -0.5 L -0.18 -0.42 L -0.47 -0.18 L -0.55 0.1 L -0.4 0.52
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: pinapita_stack_4.png
+                    collision: M -0.16 0.55 L 0.29 0.44 L 0.47 0.15 L 0.41 -0.45 L 0.29 -0.52 L 0.05 -0.45 L -0.42 -0.23 L -0.51 -0.09 L -0.51 0.28 L -0.38 0.49
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: pinapita_stack_5.png
+                        collision: M -0.04 0.52 L 0.17 0.41 L 0.41 0.17 L 0.43 -0.34 L 0.33 -0.48 L 0.02 -0.43 L -0.41 -0.18 L -0.5 0.07 L -0.43 0.36 L -0.3 0.44
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: pinapita_stack_6.png
+                            collision: M -0.05 0.46 L 0.14 0.39 L 0.39 0.06 L 0.39 -0.29 L 0.28 -0.43 L -0.28 -0.19 L -0.43 -0.01 L -0.38 0.34 L -0.21 0.44
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: pinapita_stack_7.png
+                                collision: M -0.28 0.37 L 0.14 0.31 L 0.38 -0.14 L 0.3 -0.3 L -0.29 -0.12 L -0.44 0.03
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: pinapita_stack_8.png
+                                    collision: M -0.17 0.33 L 0.06 0.26 L 0.27 0.07 L 0.33 -0.2 L 0.21 -0.24 L -0.26 -0.07 L -0.37 0.12 L -0.32 0.25
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *pinapita
+        positionInStack: 0,0
+        angleInStack: 0
+      - <<: *pinapita
+        positionInStack: .4,0
+        angleInStack: 45
+    groundColor: "#D05E9C"
+    soldBy:
+      - npcTag: IsAlchemist
+        chanceToAppear: .4
+        minCount: 4
+        maxCount: 15
+    grindStartPercent: .38
+    isTeleportationIngredient: false
+    path:
+      scale: 1,-1
+      data: C 0 0 -1 -1 -2 0 C -2 0 -3.4 -0.82 -4.14 0.5 C -4.96 -0.05 -5.9 0.36 -6.04 1.2 C -7.11 1.12 -7.82 1.78 -7.7 2.84 C -8.24 2.8 -9.17 3.64 -8.84 4.58
+  - name:
+      en: Babosa Herbácea
+      es: Babosa Herbácea
+    id: BABOSAHERBACEA
+    description: 
+      en: A bug that slowly glides, only increasing its speed when it detects its favorite herb. It'll quickly sneak into your bag for your smoking pipe weed while you take a nap.
+      es: Un bicho que se desliza lentamente, y que tan solo aumenta su velocidad cuando detecta su hierba favorita. Se meterán rápidamente en tu bolsa a por tu hierba para pipa mientras te echas la siesta.
+    ingredientListIcon: babosa_icon.png
+    inventoryImage: babosa_inv.png
+    recipeStepImage: babosa_rec.png
+    inheritFrom: Tangleweed
+    basePrice: 10.2
+    stackItems:
+      - &babosah
+        sprite: babosah_stack_1.png
+        collision: M -0.45 0.28 L 0.57 0.3 L 0.48 -0.15 L 0.25 -0.32 L 0.01 -0.33 L -0.55 -0.17 L -0.54 0.08
+        selfCollision: 
+          scale: 0.7,0.7
+        grindsInto:
+          - sprite: babosah_stack_2.png
+            collision: M -0.45 0.28 L 0.57 0.3 L 0.48 -0.15 L 0.25 -0.32 L 0.01 -0.33 L -0.55 -0.17 L -0.54 0.08
+            selfCollision: 
+              scale: 0.7,0.7
+            grindsInto:
+              - sprite: babosah_stack_3.png
+                collision: M -0.35 0.24 L 0.5 0.3 L 0.39 -0.01 L 0.2 -0.28 L -0.02 -0.25 L -0.34 -0.17 L -0.53 0.03
+                selfCollision: 
+                  scale: 0.7,0.7
+                grindsInto:
+                  - sprite: babosah_stack_4.png
+                    collision: M -0.35 0.24 L 0.5 0.3 L 0.39 -0.01 L 0.2 -0.28 L -0.02 -0.25 L -0.34 -0.17 L -0.44 0.11
+                    selfCollision: 
+                      scale: 0.7,0.7
+                    grindsInto:
+                      - sprite: babosah_stack_5.png
+                        collision: M -0.26 0.23 L 0.47 0.27 L 0.15 -0.19 L -0.11 -0.15 L -0.39 -0.04 L -0.4 0.14
+                        selfCollision: 
+                          scale: 0.7,0.7
+                        grindsInto:
+                          - sprite: babosah_stack_6.png
+                            collision: M -0.03 0.23 L 0.28 0.21 L 0.36 0.15 L 0.31 0.01 L 0.16 -0.13 L -0.12 -0.12 L -0.38 0.07 L -0.32 0.18
+                            selfCollision: 
+                              scale: 0.7,0.7
+                            grindsInto:
+                              - sprite: babosah_stack_7.png
+                                collision: M -0.25 0.17 L 0.03 0.19 L 0.35 0.16 L 0.33 0.04 L 0.16 -0.11 L -0.12 -0.08 L -0.25 0.05
+                                selfCollision: 
+                                  scale: 0.7,0.7
+                                grindsInto:
+                                  - sprite: babosah_stack_8.png
+                                    collision: M -0.21 0.13 L 0.04 0.17 L 0.23 0.08 L 0.22 -0.01 L 0.16 -0.06 L -0.05 -0.07 L -0.23 0.06
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *babosah
+        positionInStack:
+          x: -.2
+        angleInStack: -10
+      - <<: *babosah
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *babosah
+        positionInStack: .4,0
+        angleInStack: 45
+    groundColor: "#8CC85F"
+    soldBy:
+      - npcTag: IsAlchemist
+        chanceToAppear: .4
+        minCount: 4
+        maxCount: 15
+    grindStartPercent: .38
+    isTeleportationIngredient: false
+    path:
+      data: C 1 0 2 0 3 0 C 2 -1 1 -1 1 -1 C 3 -2 0 -5 -2 -2 C -2 -2 -3 -2 -3 -3
+  - name:
+      en: Brain Mushroom
+      es: Hongo Cerebral
+    id: HONGOCEREBRAL
+    description: 
+      en: Gyromytra Esculenta. Brain or guts?... It would be better known as intentinal fungus, because if someone were to eat it, it would better fit that description. 
+      es: Gyromytra Esculenta. ¿Cerebro o intestinos?... Sería mejor que se le conociese como hongo intestinal, debido a que si alguien lo comiese, encajaría mejor con esa descripción.
+    ingredientListIcon: gyromitra_icon.png
+    inventoryImage: gyromitra_inv.png
+    recipeStepImage: gyromitra_rec.png
+    inheritFrom: Tangleweed
+    basePrice: 11.1
+    stackItems:
+      - &gyro
+        sprite: gyro_stack_1.png
+        collision: M 0.06 0.57 L 0.23 0.5 L 0.53 -0.11 L 0.27 -0.52 L 0.07 -0.58 L -0.29 -0.57 L -0.49 -0.4 L -0.55 0.01 L -0.17 0.57
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: gyro_stack_2.png
+            collision: M 0 0.58 L 0.17 0.51 L 0.46 -0.07 L 0.4 -0.36 L 0.21 -0.52 L -0.31 -0.54 L -0.45 -0.39 L -0.54 -0.03 L -0.17 0.52
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: gyro_stack_3.png
+                collision: M 0.11 0.46 L 0.43 -0.09 L 0.4 -0.24 L 0.18 -0.5 L -0.31 -0.54 L -0.44 -0.3 L -0.46 0.02 L -0.14 0.48 L -0.01 0.52
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: gyro_stack_4.png
+                    collision: M 0.04 0.48 L 0.42 -0.14 L 0.03 -0.47 L -0.28 -0.45 L -0.44 -0.21 L -0.38 0.03 L -0.07 0.45
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: gyro_stack_5.png
+                        collision: M 0.03 0.34 L 0.29 -0.11 L 0.23 -0.28 L -0.03 -0.43 L -0.28 -0.39 L -0.32 -0.25 L -0.15 0.27 L -0.07 0.33
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: gyro_stack_6.png
+                            collision: M -0.01 0.3 L 0.23 -0.18 L 0.2 -0.24 L -0.03 -0.37 L -0.29 -0.26 L -0.13 0.25
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: gyro_stack_7.png
+                                collision: M -0.09 0.23 L 0 0.2 L 0.11 -0.16 L 0.1 -0.24 L -0.05 -0.32 L -0.12 -0.29 L -0.21 -0.08 L -0.12 0.21
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: gyro_stack_8.png
+                                    collision: M -0.11 0.18 L -0.03 0.16 L 0.06 -0.2 L 0.02 -0.24 L -0.09 -0.23 L -0.15 -0.13
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: 45
+      - <<: *gyro
+        positionInStack:
+          x: -.2
+        angleInStack: 10
+      - <<: *gyro
+        positionInStack: .2,0
+        angleInStack: -10
+      - <<: *gyro
+        positionInStack: .4,0
+        angleInStack: -45
+    groundColor: "#C07D67"
+    soldBy:
+      - npcTag: IsMushroomer
+        chanceToAppear: .4
+        minCount: 4
+        maxCount: 15
+    grindStartPercent: .38
+    isTeleportationIngredient: false
+    path:
+      scale: 1,-1
+      data: C 1 1 3 1 2 2 C 3 3 2 4 1 4 C 1 5 -1 5 -1 4 C -2 4 -3 3 -2 2 C -2 1 -1 1 0 1
+  - name:
+      en: Crimson Roll
+      es: Rulo Carmesí
+    id: RULOCARMESI
+    description: 
+      en: Trompium Saltarina. When eaten, it produces a sensation similar to floating in the clouds. It is common to find this mushroom bouncing around for a long time, without apparently being disturbed by anything. This may be because an insect has landed on the mushroom, as it is highly sensitive.
+      es: Trompium Saltarina. Al comerlo, produce una sensación parecida flotar en las nubes. Es frecuente encontrarse este hongo rebotando durante un buen rato, sin que aparentemente nada lo haya perturbado. Esto puede deberse a que algún insecto se haya posado sobre este hongo, ya que tiene una alta sensibilidad.
+    ingredientListIcon: rulo_icon.png
+    inventoryImage: rulo_inv.png
+    recipeStepImage: rulo_rec.png
+    inheritFrom: KrakenMushroom
+    basePrice: 11.9
+    stackItems:
+      - &rulo
+        sprite: rulo_stack_1.png
+        collision: M 0.14 0.58 L 0.23 0.18 L 0.26 -0.47 L 0.18 -0.57 L 0.04 -0.59 L -0.14 -0.54 L -0.27 -0.4 L -0.25 -0.26
+        selfCollision: 
+          scale: 0.7,0.7
+        grindsInto:
+          - sprite: rulo_stack_2.png
+            collision: M 0.13 0.54 L 0.2 0.29 L 0.22 -0.48 L 0.18 -0.55 L 0.04 -0.58 L -0.14 -0.51 L -0.23 -0.39 L -0.23 -0.27
+            selfCollision: 
+              scale: 0.7,0.7
+            grindsInto:
+              - sprite: rulo_stack_3.png
+                collision: M 0.15 0.46 L 0.2 0.31 L 0.21 0.12 L 0.19 -0.54 L 0.12 -0.57 L -0.12 -0.52 L -0.2 -0.43 L -0.17 -0.27
+                selfCollision: 
+                  scale: 0.7,0.7
+                grindsInto:
+                  - sprite: rulo_stack_4.png
+                    collision: M 0.15 0.43 L 0.2 0.31 L 0.21 0.14 L 0.15 -0.53 L 0.1 -0.55 L -0.09 -0.52 L -0.17 -0.46 L -0.2 -0.4 L -0.16 -0.27
+                    selfCollision: 
+                      scale: 0.7,0.7
+                    grindsInto:
+                      - sprite: rulo_stack_5.png
+                        collision: M 0.17 0.36 L 0.19 0.04 L 0.17 -0.4 L 0.1 -0.5 L -0.05 -0.51 L -0.18 -0.44 L -0.14 -0.25
+                        selfCollision: 
+                          scale: 0.7,0.7
+                        grindsInto:
+                          - sprite: rulo_stack_6.png
+                            collision: M 0.14 0.13 L 0.19 0.05 L 0.15 -0.32 L 0.09 -0.5 L -0.01 -0.51 L -0.11 -0.47 L -0.15 -0.39
+                            selfCollision: 
+                              scale: 0.7,0.7
+                            grindsInto:
+                              - sprite: rulo_stack_7.png
+                                collision: M 0.18 0.09 L 0.09 -0.47 L 0.02 -0.51 L -0.07 -0.48 L -0.12 -0.42 L -0.06 -0.25
+                                selfCollision: 
+                                  scale: 0.7,0.7
+                                grindsInto:
+                                  - sprite: rulo_stack_8.png
+                                    collision: M 0.09 -0.08 L 0.12 -0.26 L 0.01 -0.44 L -0.07 -0.42 L -0.08 -0.35
+                                    selfCollision: 
+                                      scale: 0.7,0.7
+        positionInStack: -.4, 0
+        angleInStack: 45
+      - <<: *rulo
+        positionInStack:
+          x: -.2
+        angleInStack: 10
+      - <<: *rulo
+        positionInStack: .2,0
+        angleInStack: -10
+      - <<: *rulo
+        positionInStack: .4,0
+        angleInStack: -45
+      - <<: *rulo
+        positionInStack: -.3,.1
+        angleInStack: 27
+      - <<: *rulo
+        positionInStack: .3,.1
+        angleInStack: -27
+      - <<: *rulo
+        positionInStack: -.3,0
+        angleInStack: 60
+      - <<: *rulo
+        positionInStack: .3,0
+        angleInStack: -60
+      - <<: *rulo
+        positionInStack: 0,.2
+        angleInStack: 0
+    groundColor: "#DB3935"
+    soldBy:
+      - npcTag: IsMushroomer
+        chanceToAppear: .3
+        minCount: 4
+        maxCount: 15
+    grindStartPercent: .38
+    isTeleportationIngredient: false
+    path:
+      data: C 0.33 -1.33 0 -3 0.74 -3.04 C 2.21 -3.13 0.38 -4.56 -0.95 -3.67 C -2.18 -2.77 -0.15 -2.74 1.58 -4.28 C 3.43 -5.91 -0.4 -8.08 -1.98 -5.74 C -2.3 -5 -1.94 -4.61 -1.59 -4.29
+  - name:
+      en: Morchella
+      es: Colmenilla
+    id: COLMENILLA
+    description: 
+      en: Morchella conica. It turns out to be a delicious mushroom, despite its strange and unappetising appearance. Caution should be taken when harvesting this mushroom, as insects are often seen hiding between its cavities. 
+      es: Morchella conica. Resulta ser una seta deliciosa, a pesar de su aspecto extraño y poco apetecible. Hay que tener precaución al cosecharla, ya que es frecuente ver insectos ocultándose entre sus oquedades. 
+    ingredientListIcon: colmenilla_icon.png
+    inventoryImage: colmenilla_inv.png
+    recipeStepImage: colmenilla_rec.png
+    inheritFrom: KrakenMushroom
+    basePrice: 11.4
+    stackItems:
+      - &colmen
+        sprite: colmen_stack_1.png
+        collision: M -0.13 0.6 L 0.01 0.59 L 0.12 0.53 L 0.24 0.27 L 0.29 0.02 L 0.15 -0.53 L 0.07 -0.58 L -0.04 -0.55 L -0.16 -0.4 L -0.28 -0.11 L -0.31 0.07 L -0.23 0.56
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: colmen_stack_2.png
+            collision: M 0.01 0.59 L 0.3 0.1 L 0.14 -0.5 L -0.03 -0.52 L -0.14 -0.38 L -0.28 0.01 L -0.2 0.56
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: colmen_stack_3.png
+                collision: M -0.15 0.55 L -0.01 0.56 L 0.07 0.5 L 0.27 0.05 L 0.2 -0.28 L 0.09 -0.51 L 0.01 -0.52 L -0.15 -0.38 L -0.27 -0.02 L -0.18 0.47
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: colmen_stack_4.png
+                    collision: M -0.1 0.54 L 0.04 0.52 L 0.23 0.05 L 0.14 -0.39 L 0.05 -0.49 L -0.11 -0.4 L -0.24 0.04 L -0.14 0.5
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: colmen_stack_5.png
+                        collision: M -0.05 0.5 L 0.06 0.46 L 0.2 0.08 L 0.17 -0.2 L 0.07 -0.45 L -0.03 -0.44 L -0.14 -0.28 L -0.2 0.01 L -0.12 0.47
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: colmen_stack_6.png
+                            collision: M -0.02 0.45 L 0.05 0.41 L 0.17 -0.04 L 0.07 -0.41 L -0.02 -0.42 L -0.17 -0.08 L -0.13 0.36
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: colmen_stack_7.png
+                                collision: M -0.11 0.4 L -0.01 0.35 L 0.12 0.08 L 0.1 -0.32 L 0.02 -0.34 L -0.12 -0.22 L -0.14 0.31
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: colmen_stack_8.png
+                                    collision: M -0.04 0.19 L 0.03 0.14 L 0.11 -0.03 L 0.05 -0.27 L -0.06 -0.29 L -0.11 -0.2 L -0.1 0.09
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: 45
+      - <<: *colmen
+        positionInStack:
+          x: -.2
+        angleInStack: 10
+      - <<: *colmen
+        positionInStack: .2,0
+        angleInStack: -10
+      - <<: *colmen
+        positionInStack: .4,0
+        angleInStack: -45
+      - <<: *colmen
+        positionInStack: 0,0
+        angleInStack: 0
+      - <<: *colmen
+        positionInStack: 0,.3
+        angleInStack: 0
+    groundColor: "#A68724"
+    soldBy:
+      - npcTag: IsMushroomer
+        chanceToAppear: .2
+        minCount: 4
+        maxCount: 15
+    grindStartPercent: .38
+    isTeleportationIngredient: false
+    path:
+      data: C 0 1 0 2 1 2 C 1.56 2.01 1.99 2.42 2 3 C 2 4 3 4 4 4 C 3 4 2 4 2 5 C 2 5.61 1.59 5.99 1 6 C 0 6 0 7 0 7
+  - name:
+      en: Tree Mushroom
+      es: Árbol Fúngico
+    id: ARBOLFUNGICO
+    description: 
+      en: Lepiota Arborescent. When it dries in nature, its shape and colours remain intact, which is why people in villages decorate their houses with this fungus, which looks like a miniature tree.
+      es: Lepiota Arborescent. Cuando se seca en la naturaleza, su forma y colores permanecen intactos, debido a esto, la gente de las aldeas decora sus casas con este hongo, que parece un árbol en miniatura.
+    ingredientListIcon: treemush_icon.png
+    inventoryImage: treemush_inv.png
+    recipeStepImage: treemush_rec.png
+    inheritFrom: Lavaroot
+    basePrice: 10.6
+    stackItems:
+      - &treemush
+        sprite: treemush_stack_1.png
+        collision: M 0.05 0.59 L 0.21 0.57 L 0.48 -0.24 L 0.45 -0.37 L 0.27 -0.54 L 0.05 -0.59 L -0.1 -0.56 L -0.26 -0.47 L -0.5 -0.1 L -0.43 0.33 L -0.11 0.56
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: treemush_stack_2.png
+            collision: M 0.09 0.57 L 0.17 0.53 L 0.46 -0.26 L 0.44 -0.35 L 0.25 -0.54 L 0.01 -0.59 L -0.25 -0.48 L -0.46 -0.14 L -0.47 -0.04 L -0.41 0.35 L -0.06 0.55
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: treemush_stack_3.png
+                collision: M 0.11 0.52 L 0.44 -0.33 L 0.4 -0.39 L 0.17 -0.55 L 0 -0.57 L -0.19 -0.49 L -0.24 -0.44 L -0.42 -0.11 L -0.39 0.31 L -0.04 0.53
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: treemush_stack_4.png
+                    collision: M 0.03 0.51 L 0.28 0.05 L 0.37 -0.35 L 0.15 -0.54 L -0.15 -0.5 L -0.39 -0.13 L -0.37 0.27 L -0.04 0.49
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: treemush_stack_5.png
+                        collision: M 0.01 0.49 L 0.24 0.1 L 0.34 -0.34 L 0.15 -0.52 L -0.13 -0.49 L -0.21 -0.41 L -0.34 -0.11 L -0.34 0.24
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: treemush_stack_6.png
+                            collision: M 0 0.41 L 0.22 0.07 L 0.28 -0.34 L 0.15 -0.47 L -0.15 -0.46 L -0.27 -0.11 L -0.29 0.22
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: treemush_stack_7.png
+                                collision: M -0.01 0.31 L 0.16 0.05 L 0.19 -0.38 L 0.12 -0.46 L -0.12 -0.43 L -0.22 -0.16 L -0.21 0.19
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: treemush_stack_8.png
+                                    collision: M -0.1 0.2 L 0.01 0.17 L 0.16 -0.32 L 0.14 -0.42 L 0.07 -0.43 L -0.12 -0.34 L -0.17 0.13
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: 45
+      - <<: *treemush
+        positionInStack:
+          x: -.2
+        angleInStack: 10
+      - <<: *treemush
+        positionInStack: .2,0
+        angleInStack: -10
+      - <<: *treemush
+        positionInStack: .4,0
+        angleInStack: -45
+    groundColor: "#C6A3F0"
+    soldBy:
+      - npcTag: IsMushroomer
+        chanceToAppear: .2
+        minCount: 4
+        maxCount: 15
+    grindStartPercent: .38
+    isTeleportationIngredient: false
+    path:
+      data: C 0.42 -1.98 0 -3.6 1.2 -4.8 C 1.8 -4.2 3 -5.4 3.6 -4.8 C 7.8 -1.8 0 -11.4 2.4 -6
+  - name:
+      en: Luminous Ballshroom
+      es: Bolhongo Lumínico
+    id: HONGOBOLALUMINICO
+    description: 
+      en: Lamparelia Calida. One of the mushrooms with the greatest bioluminiscent properties. It is not recommended to approach these mushrooms at night, as there are lurking creatures that use them as bait to catch their prey.
+      es: Lamparelia Cálida. Uno de los hongos con mayores propiedades bioluminiscencentes. No se recomienda acercarse a estos hongos durante la noche, ya que existen criaturas acechantes que los utilizan como cebo para atrapar a sus presas.
+    ingredientListIcon: bombilla_icon.png
+    inventoryImage: bombilla_inv.png
+    recipeStepImage: bombilla_rec.png
+    inheritFrom: Marshroom
+    basePrice: 11.7
+    stackItems:
+      - &bombilla
+        sprite: bombilla_stack_1.png
+        collision: M 0.02 0.57 L 0.22 0.51 L 0.55 -0.23 L 0.53 -0.37 L 0.39 -0.56 L 0.09 -0.57 L -0.47 -0.26 L -0.57 -0.11 L -0.52 0.15 L -0.16 0.56
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: bombilla_stack_2.png
+            collision: M -0.12 0.57 L 0.2 0.52 L 0.45 -0.09 L 0.52 -0.32 L 0.43 -0.55 L 0.34 -0.59 L 0.04 -0.54 L -0.47 -0.27 L -0.58 -0.05 L -0.53 0.1 L -0.18 0.53
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: bombilla_stack_3.png
+                collision: M -0.07 0.56 L 0.09 0.54 L 0.31 0.29 L 0.46 -0.11 L 0.47 -0.44 L 0.24 -0.56 L 0.04 -0.54 L -0.39 -0.26 L -0.51 -0.1 L -0.5 0.07 L -0.13 0.52
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: bombilla_stack_4.png
+                    collision: M 0.04 0.54 L 0.19 0.46 L 0.32 0.22 L 0.48 -0.23 L 0.47 -0.31 L 0.41 -0.43 L 0.27 -0.53 L 0.17 -0.52 L -0.04 -0.42 L -0.32 -0.26 L -0.52 -0.05 L -0.45 0.1 L -0.13 0.49
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: bombilla_stack_5.png
+                        collision: M 0.03 0.53 L 0.1 0.51 L 0.28 0.23 L 0.42 -0.15 L 0.41 -0.37 L 0.32 -0.51 L -0.01 -0.42 L -0.43 -0.16 L -0.47 0.05 L -0.06 0.5
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: bombilla_stack_6.png
+                            collision: M 0.07 0.53 L 0.28 0.16 L 0.39 -0.28 L 0.36 -0.38 L 0.13 -0.45 L -0.3 -0.21 L -0.4 -0.13 L -0.37 0.07 L -0.04 0.46
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: bombilla_stack_7.png
+                                collision: M 0.01 0.47 L 0.06 0.45 L 0.21 0.16 L 0.32 -0.18 L 0.3 -0.3 L 0.19 -0.39 L 0.06 -0.38 L -0.32 -0.14 L -0.36 -0.04 L -0.34 0.04 L -0.04 0.46
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: bombilla_stack_8.png
+                                    collision: M 0 0.41 L 0.08 0.28 L 0.25 -0.09 L 0.28 -0.27 L 0.2 -0.36 L 0.12 -0.36 L 0.04 -0.28 L -0.22 -0.05 L -0.17 0.09
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: 45
+      - <<: *bombilla
+        positionInStack:
+          x: -.2
+        angleInStack: 10
+      - <<: *bombilla
+        positionInStack: .2,0
+        angleInStack: -10
+      - <<: *bombilla
+        positionInStack: .4,0
+        angleInStack: -45
+    groundColor: "#E6F84F"
+    soldBy:
+      - npcTag: IsMushroomer
+        chanceToAppear: .4
+        minCount: 6
+        maxCount: 24
+    grindStartPercent: .25
+    isTeleportationIngredient: false
+    path:
+      data: C -1 0 -3 0 -4 -1 C -4 -2 -3 -4 -1 -3 C -1 -4 1 -4 1 -3 C 3 -4 4 -2 4 -1
+  - name:
+      en: Obsidian
+      es: Obsidiana
+    id: OBSIDIANA
+    description:
+      en: Dark volcanic glass which, when broken, has conchoidal fractures giving it extremely sharp edges. Cutting tools and utensils can be made from this material. 
+      es: Vídrio oscuro volcánico que, al romperse, sus frecturas tienen forma concoidea lo que le otorga unos bordes extremadamente afilados. Se pueden fabricar utensilios y herramientas cortantes con este material. 
+    ingredientListIcon: obsid_icon.png
+    inventoryImage: obsid_inv.png
+    recipeStepImage: obsid_rec.png
+    inheritFrom: FrostSapphire
+    basePrice: 38
+    stackItems:
+      - &obsid
+        sprite: obsid_stack_1.png
+        collision: M -0.19 0.41 L 0.06 0.37 L 0.55 0.17 L 0.59 0.07 L 0.49 -0.24 L 0.31 -0.38 L 0.1 -0.44 L -0.52 -0.06 L -0.58 0.03 L -0.59 0.18 L -0.33 0.39
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: obsid_stack_2a.png
+            collision: M 0 0.29 L 0.34 0.25 L 0.38 0.17 L 0.36 0.05 L 0.26 -0.17 L 0.07 -0.29 L -0.1 -0.35 L -0.4 -0.01 L -0.29 0.13 L -0.14 0.23
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: obsid_stack_2aa.png
+                collision: M -0.04 0.17 L 0.24 0.12 L 0.3 0.06 L 0.3 -0.01 L 0.25 -0.14 L 0.17 -0.17 L 0 -0.13 L -0.12 -0.08 L -0.3 0.05 L -0.15 0.13
+                selfCollision: 
+                  scale: 0.5,0.5
+              - sprite: obsid_stack_2ab.png
+                collision: M -0.07 0.05 L 0.51 -0.16 L 0.42 -0.3 L 0.24 -0.4 L 0.1 -0.44 L -0.21 -0.11
+                selfCollision: 
+                  scale: 0.5,0.5
+          - sprite: obsid_stack_2b.png
+            collision: M 0.04 0.25 L 0.2 0.23 L 0.37 0.1 L -0.07 -0.25 L -0.2 -0.26 L -0.32 -0.2 L -0.38 -0.1 L -0.38 -0.01 L -0.16 0.22 L -0.06 0.24
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: obsid_stack_2ba.png
+                collision: M -0.1 0.16 L 0.08 0.14 L 0.22 0.07 L 0.27 0.02 L 0 -0.15 L -0.13 -0.08 L -0.22 -0.01 L -0.28 0.07 L -0.22 0.15
+                selfCollision: 
+                  scale: 0.5,0.5
+              - sprite: obsid_stack_2bb.png
+                collision: M -0.05 0.18 L 0.19 -0.02 L 0.09 -0.15 L -0.04 -0.17 L -0.14 -0.14 L -0.19 -0.06 L -0.22 0.07
+                selfCollision: 
+                  scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *obsid
+        positionInStack:
+          x: -.2
+        angleInStack: -10
+      - <<: *obsid
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *obsid
+        positionInStack: .4,0
+        angleInStack: 45
+      - <<: *obsid
+        positionInStack: 0,0
+        angleInStack: 0
+      - <<: *obsid
+        positionInStack: 0,.3
+        angleInStack: 180
+    groundColor: "#616165"
+    soldBy:
+      - npcTag: IsDwarfMiner
+        chanceToAppear: .5
+        minCount: 1
+        maxCount: 18
+    grindStartPercent: .2
+    isTeleportationIngredient: true
+    path:
+      data: C -2 0 -10 4 -1 4 C -3 3.3 -2.6 1.2 -0.7 0.4
+  - name:
+      en: Scheelite
+      es: Scheelita
+    id: SCHEELITA
+    description:  
+      en: Mineral with fluorescent properties that are enhanced by exposure to firelight or moonlight. It is highly fragile, so it is extremely difficult to find crystals that are not fragmented.
+      es: Mineral denso con propiedades fluorescentes que se potencian si se expone a la luz del fuego o la luz de la luna. Presenta una alta fragilidad, por lo que es extremadamente difícil encontrar cristales que no estén fragmentados.
+    ingredientListIcon: scheel_icon.png
+    inventoryImage: scheel_inv.png
+    recipeStepImage: scheel_rec.png
+    inheritFrom: FireCitrine
+    basePrice: 47
+    stackItems:
+      - &scheel
+        sprite: scheel_stack_1.png
+        collision: M -0.03 0.43 L 0.2 0.38 L 0.4 0.22 L 0.58 -0.09 L 0.28 -0.35 L -0.04 -0.43 L -0.29 -0.35 L -0.57 -0.12 L -0.45 0.23 L -0.25 0.38
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: scheel_stack_2a.png
+            collision: M -0.03 0.44 L 0.2 0.39 L 0.42 0.22 L 0.17 -0.37 L -0.04 -0.44 L -0.29 -0.36 L -0.58 -0.12 L -0.47 0.22 L -0.25 0.38 L -0.16 0.42
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: scheel_stack_2aa.png
+                collision: M -0.16 0.41 L -0.09 0.35 L 0.02 -0.04 L -0.1 -0.4 L -0.14 -0.41 L -0.29 -0.35 L -0.58 -0.12 L -0.46 0.22 L -0.25 0.38
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: scheel_stack_3aaa.png
+                    collision: M -0.28 0.02 L 0.03 0 L -0.12 -0.41 L -0.3 -0.34 L -0.58 -0.11
+                    selfCollision: 
+                      scale: 0.5,0.5
+                  - sprite: scheel_stack_3aab.png
+                    collision: M -0.12 0.29 L 0.02 -0.03 L -0.58 -0.13 L -0.41 0.12 L -0.21 0.27
+                    selfCollision: 
+                      scale: 0.5,0.5
+                  - sprite: scheel_stack_3aac.png
+                    collision: M -0.16 0.41 L -0.09 0.35 L -0.1 0.27 L -0.3 0.11 L -0.48 0.22 L -0.26 0.38
+                    selfCollision: 
+                      scale: 0.5,0.5
+              - sprite: scheel_stack_2ab.png
+                collision: M -0.03 0.43 L 0.2 0.38 L 0.42 0.21 L 0.16 -0.38 L 0.08 -0.42 L -0.04 -0.45 L -0.15 -0.37 L -0.32 -0.03 L -0.2 0.31
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: scheel_stack_3aba.png
+                    collision: M 0.19 0.38 L 0.42 0.21 L 0.17 -0.37 L 0.08 -0.41 L 0.01 -0.38 L -0.15 0 L -0.07 0.24 L 0.02 0.3
+                    selfCollision: 
+                      scale: 0.5,0.5
+                  - sprite: scheel_stack_3abb.png
+                    collision: M -0.03 0.43 L 0.17 0.29 L 0.21 -0.04 L 0.04 -0.4 L -0.04 -0.45 L -0.14 -0.38 L -0.32 -0.03 L -0.24 0.26 L -0.18 0.33
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: scheel_stack_3abba.png
+                        collision: M -0.22 0.05 L 0.24 0 L 0.05 -0.39 L -0.04 -0.44 L -0.15 -0.37 L -0.33 -0.02
+                        selfCollision: 
+                          scale: 0.5,0.5
+                      - sprite: scheel_stack_3abbb.png
+                        collision: M -0.09 0.34 L 0.07 0.3 L 0.21 -0.04 L -0.01 -0.09 L -0.32 -0.04 L -0.23 0.25
+                        selfCollision: 
+                          scale: 0.5,0.5
+                      - sprite: scheel_stack_3abbc.png
+                        collision: M -0.03 0.43 L 0.17 0.3 L -0.03 0.19 L -0.2 0.3
+                        selfCollision: 
+                          scale: 0.5,0.5
+          - sprite: scheel_stack_2b.png
+            collision: M 0.14 0.22 L 0.33 0.22 L 0.41 0.15 L 0.59 -0.1 L 0.27 -0.35 L 0.16 -0.4 L 0.01 -0.01
+            selfCollision: 
+              scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *scheel
+        positionInStack:
+          x: -.2
+        angleInStack: -10
+      - <<: *scheel
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *scheel
+        positionInStack: .4,0
+        angleInStack: 45
+    groundColor: "#D3961E"
+    soldBy:
+      - npcTag: IsDwarfMiner
+        chanceToAppear: .3
+        minCount: 1
+        maxCount: 12
+    grindStartPercent: .2
+    isTeleportationIngredient: true
+    path:
+      data: C -0.67 0.33 -1.33 0.67 -2 1 C -2.33 0.67 -2.67 0.33 -3 0 C -3.67 0.33 -4.33 0.67 -5 1 C -6 0 -7 -1 -8 -2 C -6.67 -2.67 -5.33 -3.33 -4 -4 C -3.67 -3.67 -3.33 -3.33 -3 -3
+  - name:
+      en: Aloe Maligna
+      es: Aloe Maligna
+    id: ALOEMALIGNA
+    description: 
+      en: A strange aloe with unusual colours, as well as its toxicity, which is quite high. Its tones turn completely purple in periods of drought.
+      es: Un extraño aloe de colores inusuales, así como su toxicidad, que es bastante elevada. Sus tonos pasan a ser completamente morados en periodos de sequía.
+    ingredientListIcon: aloevil_icon.png
+    inventoryImage: aloevil_inv.png
+    recipeStepImage: aloevil_rec.png
+    inheritFrom: Tangleweed
+    basePrice: 10
+    stackItems:
+      - &aloevil
+        sprite: aloevil_stack_1.png
+        collision: M 0 0.59 L 0.14 0.56 L 0.21 0.49 L 0.3 0.28 L 0.33 -0.01 L 0.27 -0.45 L 0.18 -0.59 L -0.3 0.1 L -0.36 0.3 L -0.28 0.47 L -0.14 0.55
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: aloevil_stack_2.png
+            collision: M 0.02 0.57 L 0.11 0.54 L 0.29 0.35 L 0.32 0.05 L 0.26 -0.42 L 0.2 -0.52 L 0.15 -0.49 L -0.32 0.16 L -0.33 0.32 L -0.28 0.45 L -0.12 0.53
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: aloevil_stack_3.png
+                collision: M -0.02 0.55 L 0.19 0.44 L 0.29 0.2 L 0.29 -0.12 L 0.23 -0.47 L 0.2 -0.47 L -0.33 0.2 L -0.32 0.28 L -0.24 0.46
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: aloevil_stack_4.png
+                    collision: M -0.02 0.54 L 0.15 0.48 L 0.26 0.17 L 0.22 -0.39 L 0.17 -0.44 L -0.31 0.2 L -0.26 0.41 L -0.12 0.52
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: aloevil_stack_5.png
+                        collision: M -0.02 0.54 L 0.15 0.48 L 0.26 0.17 L 0.22 -0.39 L 0.17 -0.44 L -0.31 0.2 L -0.26 0.41 L -0.12 0.52
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: aloevil_stack_6.png
+                            collision: M -0.06 0.48 L 0.05 0.46 L 0.19 0.28 L 0.22 -0.04 L 0.2 -0.3 L 0.15 -0.3 L -0.28 0.2 L -0.26 0.34 L -0.12 0.47
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: aloevil_stack_7.png
+                                collision: M 0.02 0.46 L 0.17 0.27 L 0.21 0.01 L 0.18 -0.26 L 0.13 -0.27 L -0.2 0.13 L -0.23 0.3 L -0.16 0.42
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: aloevil_stack_8.png
+                                    collision: M -0.06 0.43 L 0.02 0.4 L 0.14 0.28 L 0.15 0.22 L 0.17 -0.11 L 0.14 -0.2 L 0.07 -0.2 L -0.01 -0.1 L -0.21 0.24 L -0.19 0.38 L -0.14 0.43
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *aloevil
+        positionInStack:
+          x: -.2
+        angleInStack: -10
+      - <<: *aloevil
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *aloevil
+        positionInStack: .4,0
+        angleInStack: 45
+      - <<: *aloevil
+        positionInStack: 0,0
+        angleInStack: 0
+      - <<: *aloevil
+        positionInStack: 0,.3
+        angleInStack: 180
+    groundColor: "#40BC82"
+    soldBy:
+      - npcTag: IsHerbalist
+        chanceToAppear: .3
+        minCount: 3
+        maxCount: 16
+    grindStartPercent: .26
+    isTeleportationIngredient: false
+    path:
+      data: C -0.29 1.65 -1.8 1.8 -1.8 1.8 C -1.61 1.97 -1.46 2.03 -1.2 1.98 C -1.2 2.4 -3 3 -3.6 2.4 C -3.6 2.4 -3.63 2.85 -3.2 3 C -4.33 3.28 -5.62 3.01 -6 2.4 C -6.05 2.63 -6.02 2.86 -5.9 2.99 C -7.24 3 -8.34 1.76 -8.4 1.2
+  - name:
+      en: Spiral Fern
+      es: Helecho Espiralado
+    id: HELECHOESPIRALADO
+    description: 
+      en: A kind of fern that keeps its spiral shape throughout its life, but if touched, it opens up to reveal a beautiful shape. Shortly afterwards, if there is calm around it, it returns to its spiral shape.  
+      es: Una especie de helecho que mantiene su forma espiralada durante toda su vida, pero si se toca, se abre mostrando una preciosa forma. Poco tiempo después, si hay calma a su alrededor vuelve a su forma en espiral.  
+    ingredientListIcon: hele_icon.png
+    inventoryImage: hele_inv.png
+    recipeStepImage: hele_rec.png
+    inheritFrom: EvergreenFern
+    basePrice: 9.5
+    stackItems:
+      - &hele
+        sprite: hele_stack_1.png
+        collision: M -0.13 0.56 L 0.15 -0.02 L 0.22 -0.29 L 0.21 -0.47 L 0.13 -0.58 L 0 -0.61 L -0.12 -0.57 L -0.22 -0.43 L -0.23 -0.25 L -0.16 0.44
+        selfCollision: 
+          scale: 0.7,0.7
+        grindsInto:
+          - sprite: hele_stack_2.png
+            collision: M -0.12 0.41 L 0.15 -0.02 L 0.22 -0.36 L 0.18 -0.5 L 0.08 -0.58 L -0.03 -0.59 L -0.14 -0.51 L -0.21 -0.41 L -0.18 -0.14
+            selfCollision: 
+              scale: 0.7,0.7
+            grindsInto:
+              - sprite: hele_stack_3.png
+                collision: M -0.1 0.35 L 0.1 0.02 L 0.19 -0.27 L 0.19 -0.36 L 0.13 -0.54 L 0.08 -0.57 L -0.07 -0.57 L -0.16 -0.49 L -0.19 -0.36 L -0.18 -0.23
+                selfCollision: 
+                  scale: 0.7,0.7
+                grindsInto:
+                  - sprite: hele_stack_4.png
+                    collision: M -0.08 0.29 L -0.02 0.24 L 0.09 0.02 L 0.16 -0.24 L 0.17 -0.36 L 0.12 -0.5 L -0.03 -0.56 L -0.09 -0.54 L -0.17 -0.35 L -0.11 0.24
+                    selfCollision: 
+                      scale: 0.7,0.7
+                    grindsInto:
+                      - sprite: hele_stack_5.png
+                        collision: M -0.09 0.23 L 0.03 0.15 L 0.15 -0.2 L 0.13 -0.47 L 0.08 -0.52 L 0 -0.52 L -0.11 -0.48 L -0.16 -0.39 L -0.16 -0.25
+                        selfCollision: 
+                          scale: 0.7,0.7
+                        grindsInto:
+                          - sprite: hele_stack_6.png
+                            collision: M -0.01 0.17 L 0.07 0.07 L 0.15 -0.28 L 0.1 -0.47 L 0.04 -0.51 L -0.11 -0.46 L -0.15 -0.39 L -0.14 -0.19
+                            selfCollision: 
+                              scale: 0.7,0.7
+                            grindsInto:
+                              - sprite: hele_stack_7.png
+                                collision: M 0.02 0.07 L 0.1 -0.07 L 0.14 -0.27 L 0.08 -0.47 L -0.01 -0.48 L -0.09 -0.42 L -0.12 -0.3 L -0.1 -0.21
+                                selfCollision: 
+                                  scale: 0.7,0.7
+                                grindsInto:
+                                  - sprite: hele_stack_8.png
+                                    collision: M 0.01 -0.1 L 0.06 -0.11 L 0.1 -0.24 L 0.05 -0.47 L 0 -0.45 L -0.1 -0.33 L -0.02 -0.13
+                                    selfCollision: 
+                                      scale: 0.7,0.7
+        positionInStack: -.4, 0
+        angleInStack: 45
+      - <<: *hele
+        positionInStack:
+          x: -.2
+        angleInStack: 10
+      - <<: *hele
+        positionInStack: .2,0
+        angleInStack: -10
+      - <<: *hele
+        positionInStack: .4,0
+        angleInStack: -45
+      - <<: *hele
+        positionInStack: -.3,.1
+        angleInStack: 27
+      - <<: *hele
+        positionInStack: .3,.1
+        angleInStack: -27
+      - <<: *hele
+        positionInStack: -.3,0
+        angleInStack: 60
+      - <<: *hele
+        positionInStack: .3,0
+        angleInStack: -60
+      - <<: *hele
+        positionInStack: 0,.2
+        angleInStack: 0
+    groundColor: "#30AD3E"
+    soldBy:
+      - npcTag: IsHerbalist
+        chanceToAppear: .4
+        minCount: 3
+        maxCount: 21
+    grindStartPercent: .26
+    isTeleportationIngredient: false
+    path:
+      data: C 0.93 0.23 2.1 0 2.8 0.7 C 3.5 1.4 2.8 2.8 4.2 3.5 C 6.3 4.2 7.7 3.5 7.7 2.1 C 7.7 0.7 5.6 -0.7 4.2 0.7 C 3.5 1.4 4.9 3.5 6.3 2.1
+  - name:
+      en: Rosa Fúgica
+      es: Rosa Fúngica
+    id: ROSAFUNGICA
+    description: 
+      en: A fungus that grows in a spiral. Turns into a very sticky substance when crushed. Harvesting it is a task that very few people are willing to undertake, because it is very easy to get covered with the dangerous sticky juices that it spreads when it is cut.
+      es: Un hongo que crece en espiral. Se transforma en una sustancia muy pegajosa al ser triturado. Cosecharlo es una tarea que muy poca gente está dispuesta a llevar a cabo, debido a que es realmente fácil pringarse con los peligrosos jugos pegajosos que explusa al cortarla.
+    ingredientListIcon: rosa_icon.png
+    inventoryImage: rosa_inv.png
+    recipeStepImage: rosa_rec.png
+    inheritFrom: SulphurShelf
+    basePrice: 13
+    stackItems:
+      - &rosa
+        sprite: rosa_stack_1.png
+        collision: M -0.4 0.56 L 0.21 0.48 L 0.29 0.42 L 0.59 -0.13 L 0.58 -0.2 L 0.47 -0.45 L 0.05 -0.57 L -0.29 -0.55 L -0.56 -0.3 L -0.6 -0.21 L -0.57 0.34 L -0.51 0.5
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: rosa_stack_2.png
+            collision: M -0.35 0.52 L 0.12 0.49 L 0.23 0.45 L 0.45 0.03 L 0.49 -0.13 L 0.48 -0.26 L 0.16 -0.55 L 0.1 -0.57 L -0.27 -0.51 L -0.34 -0.47 L -0.51 -0.28 L -0.57 -0.11 L -0.57 0.3 L -0.5 0.43
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: rosa_stack_3.png
+                collision: M -0.18 0.48 L 0.23 0.42 L 0.46 0 L 0.44 -0.07 L 0.32 -0.41 L 0.17 -0.49 L -0.27 -0.51 L -0.34 -0.48 L -0.55 -0.11 L -0.57 0.31 L -0.52 0.4 L -0.45 0.44
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: rosa_stack_4.png
+                    collision: M -0.32 0.41 L -0.05 0.41 L 0.2 0.36 L 0.42 0.03 L 0.42 -0.02 L 0.23 -0.37 L 0.1 -0.43 L -0.25 -0.44 L -0.31 -0.4 L -0.5 -0.13 L -0.48 0.15 L -0.38 0.35
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: rosa_stack_5.png
+                        collision: M -0.1 0.37 L 0.15 0.35 L 0.23 0.27 L 0.36 0 L 0.37 -0.11 L 0.33 -0.17 L 0.1 -0.34 L -0.25 -0.34 L -0.47 -0.08 L -0.47 0.08 L -0.42 0.14 L -0.22 0.33
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: rosa_stack_6.png
+                            collision: M 0.1 0.32 L 0.36 0.02 L 0.36 -0.08 L 0.16 -0.29 L 0.1 -0.3 L -0.2 -0.29 L -0.28 -0.26 L -0.41 -0.12 L -0.44 0.02 L -0.33 0.16 L -0.11 0.29
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: rosa_stack_7.png
+                                collision: M 0.1 0.29 L 0.17 0.27 L 0.22 0.17 L 0.24 0.01 L 0.17 -0.17 L 0.13 -0.18 L -0.13 -0.26 L -0.24 -0.21 L -0.33 -0.05 L -0.25 0.17 L -0.04 0.26
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: rosa_stack_8.png
+                                    collision: M 0.06 0.29 L 0.14 0.25 L 0.17 0.18 L 0.18 0.02 L 0.15 -0.02 L -0.03 -0.16 L -0.1 -0.16 L -0.23 -0.1 L -0.27 -0.03 L -0.26 0.06 L -0.02 0.25
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *rosa
+        positionInStack:
+          x: -.2
+        angleInStack: -10
+      - <<: *rosa
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *rosa
+        positionInStack: .4,0
+        angleInStack: 45
+    groundColor: "#A44565"
+    soldBy:
+      - npcTag: IsMushroomer
+        chanceToAppear: .2
+        minCount: 2
+        maxCount: 15
+    grindStartPercent: .2
+    isTeleportationIngredient: false
+    path:
+      data: C 0 1 -0.22 2 -0.96 2.05 C -1.87 2.29 -1.06 2.67 -2.11 2.95 C -2.54 3.07 -2.73 3.17 -3.43 3.71 C -4.09 4.26 -4.16 4.93 -3.11 5.31 C -2.61 5.55 -3.62 6.59 -2.62 6.52 C -1.5 6.52 -1.88 8.5 0 7 C 0.53 6.41 1.73 7.31 2.08 6.67 C 3.53 7.09 3.69 6.27 3.69 5.86 C 3.71 4.6 2.83 4.68 3 4 C 3.5 2.7 2.21 3.29 2 3 C 0.9 1.96 0.2 2.7 0 3 C -0.57 4.34 -2.24 3.67 -2 5 C -1.63 5.9 -0.32 6.38 0 6 C 0.89 5.42 2.11 5.95 2 5 C 1.66 3.71 0.54 3.52 0.01 4.88
+  - name:
+      en: Vampiric Parasol
+      es: Parasol Chupasangre
+    id: PARASOLCHUPASANGRE
+    description:  
+      en: Lepiota Sanguina. A fungus that can reach great dimensions. It is believed that vampires use this fungus to prepare potions that allow them to receive sunlight without being harmed. 
+      es: Lepiota Sanguina. Un hongo que puede alcanzar grandes dimensiones. Existe la creencia de que los vampiros utilizan este hongo para preparar pociones que les permiten recibir la luz del sol sin recibir daño. 
+    ingredientListIcon: paras_icon.png
+    inventoryImage: paras_inv.png
+    recipeStepImage: paras_rec.png
+    inheritFrom: KrakenMushroom
+    basePrice: 12.3
+    stackItems:
+      - &paras
+        sprite: paras_stack_1.png
+        collision: M -0.05 0.58 L 0.04 0.55 L 0.57 -0.42 L 0.55 -0.47 L -0.02 -0.6 L -0.08 -0.59 L -0.58 -0.2 L -0.57 -0.15 L -0.13 0.55
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: paras_stack_2.png
+            collision: M -0.04 0.55 L 0.07 0.48 L 0.54 -0.42 L 0.53 -0.47 L 0.25 -0.53 L -0.05 -0.55 L -0.08 -0.55 L -0.56 -0.21 L -0.57 -0.16 L -0.09 0.54
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: paras_stack_2a.png
+                collision: M -0.54 -0.13 L -0.17 -0.12 L 0.19 -0.22 L 0.5 -0.36 L 0.55 -0.43 L 0.54 -0.47 L 0.25 -0.53 L -0.04 -0.55 L -0.11 -0.53 L -0.56 -0.21 L -0.58 -0.15
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: paras_stack_3a.png
+                    collision: M -0.54 -0.13 L -0.31 -0.14 L 0.09 -0.21 L 0.49 -0.35 L 0.5 -0.41 L 0.45 -0.46 L 0.35 -0.48 L -0.14 -0.49 L -0.52 -0.23 L -0.55 -0.16
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: paras_stack_4b.png
+                        collision: M -0.33 -0.14 L -0.07 -0.18 L 0.35 -0.3 L 0.4 -0.4 L 0.36 -0.45 L -0.1 -0.45 L -0.18 -0.41 L -0.43 -0.27 L -0.45 -0.2
+                        selfCollision: 
+                          scale: 0.5,0.5
+              - sprite: paras_stack_2b.png
+                collision: M -0.05 0.56 L 0.08 0.48 L 0.1 0.02 L 0.07 -0.17 L -0.07 -0.12 L -0.11 -0.05 L -0.11 0.53
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: paras_stack_3b.png
+                    collision: M -0.01 0.5 L 0.05 0.47 L 0.07 -0.11 L 0.02 -0.14 L -0.04 -0.13 L -0.07 0.08 L -0.07 0.48
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: paras_stack_4b.png
+                        collision: M -0.01 0.46 L 0.04 0.41 L 0.06 -0.04 L 0.03 -0.11 L -0.05 -0.07 L -0.07 0.31 L -0.06 0.43
+                        selfCollision: 
+                          scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: 45
+      - <<: *paras
+        positionInStack:
+          x: -.2
+        angleInStack: 10
+      - <<: *paras
+        positionInStack: .2,0
+        angleInStack: -10
+      - <<: *paras
+        positionInStack: .4,0
+        angleInStack: -45
+    groundColor: "#841111"
+    soldBy:
+      - npcTag: IsMushroomer
+        chanceToAppear: .1
+        minCount: 2
+        maxCount: 15
+    grindStartPercent: .22
+    isTeleportationIngredient: false
+    path:
+      data: C -2 1 -2 3 -2 7 C -2 0 2 0 2 7 C 2 3 2 2 1.24 1.01 C 0 0 0 -2 0 -3
+  - name:
+      en: Staurolite
+      es: Estaurolita
+    id: ESTAUROLITA
+    description:  
+      en: A metamorphic mineral that usually presents twins. The cross-shaped twinned crystals have been used since ancient times as an amulet against evil spirits.
+      es: Un mineral metamórfico que habitualmente suele presentar maclas. Las maclas en cruz que suelen formar sus cristales han sido utilizadas desde la antigüedad como amuleto contra los éspíritus malignos.
+    ingredientListIcon: stauro_icon.png
+    inventoryImage: stauro_inv.png
+    recipeStepImage: stauro_rec.png
+    inheritFrom: BloodRuby
+    basePrice: 45
+    stackItems:
+      - &stauro
+        sprite: stauro_stack_1.png
+        collision: M -0.06 0.58 L 0.12 0.54 L 0.44 0.23 L 0.58 0 L 0.58 -0.05 L 0.52 -0.21 L 0.35 -0.47 L 0.15 -0.58 L -0.1 -0.54 L -0.48 -0.31 L -0.56 -0.19 L -0.6 -0.01 L -0.57 0.09 L -0.35 0.51
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: stauro_stack_1a.png
+            collision: M 0.41 0.23 L 0.5 0.14 L 0.6 -0.04 L 0.52 -0.21 L 0.34 -0.49 L 0.14 -0.58 L -0.1 -0.55 L -0.21 -0.47 L -0.23 -0.34 L -0.07 -0.03 L 0.21 0.19
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: stauro_stack_1aa.png
+                collision: M -0.01 0.06 L 0.27 -0.14 L 0.35 -0.46 L 0.14 -0.57 L -0.1 -0.54 L -0.2 -0.47 L -0.23 -0.34
+                selfCollision: 
+                  scale: 0.5,0.5
+              - sprite: stauro_stack_1ab.png
+                collision: M 0.4 0.23 L 0.49 0.14 L 0.59 -0.03 L 0.52 -0.2 L 0.28 -0.23 L 0.04 -0.15 L 0.01 0.02 L 0.21 0.18
+                selfCollision: 
+                  scale: 0.5,0.5
+          - sprite: stauro_stack_1b.png
+            collision: M -0.06 0.59 L 0.11 0.54 L 0.16 0.45 L 0.23 0.09 L 0.04 -0.15 L -0.17 -0.3 L -0.4 -0.34 L -0.48 -0.32 L -0.57 -0.18 L -0.6 0.03 L -0.35 0.52
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: stauro_stack_1ba.png
+                collision: M -0.24 0.14 L -0.04 -0.01 L 0.05 -0.13 L -0.17 -0.3 L -0.4 -0.35 L -0.48 -0.32 L -0.58 -0.17 L -0.6 0.03 L -0.56 0.1
+                selfCollision: 
+                  scale: 0.5,0.5
+              - sprite: stauro_stack_1bb.png
+                collision: M -0.07 0.59 L 0.11 0.54 L 0.17 0.43 L 0.22 0.09 L 0.06 -0.1 L -0.25 0.11 L -0.35 0.18 L -0.38 0.44 L -0.34 0.52
+                selfCollision: 
+                  scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *stauro
+        positionInStack:
+          x: -.2
+        angleInStack: -10
+      - <<: *stauro
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *stauro
+        positionInStack: .4,0
+        angleInStack: 45
+    groundColor: "#806656"
+    soldBy:
+      - npcTag: IsDwarfMiner
+        chanceToAppear: .2
+        minCount: 1
+        maxCount: 10
+    grindStartPercent: .2
+    isTeleportationIngredient: true
+    path:
+      data: L 0 2 L 2 2 L 2 4 L 6 4 L 4 2 L 4 -2 L 2 -4 L 6 -4 L 6 -2 L 8 -2 L 8 0
+  - name:
+      en: Gohetite
+      es: Gohetita
+    id: GOHETITA
+    description: 
+      en: It is iridescent because it incorporates water molecules in its crystalline structure. Its epheroidal crystals are actually formed by the union of tiny needle-shaped crystals that are grouped radially. 
+      es: Presenta iridescencias debido a que incorpora moléculas de agua en su estructura cristalina. Sus cristales eferoidales están formados, en realidad, por la unión de diminutos cristales con forma de agujas que se agrupan de forma radial. 
+    ingredientListIcon: gohe_icon.png
+    inventoryImage: gohe_inv.png
+    recipeStepImage: gohe_rec.png
+    inheritFrom: BloodRuby
+    basePrice: 40
+    stackItems:
+      - &gohe
+        sprite: gohe_stack_1.png
+        collision: M -0.34 0.41 L 0.46 0.36 L 0.56 0.3 L 0.58 0.2 L 0.58 0.08 L 0.32 -0.29 L 0.05 -0.41 L -0.07 -0.4 L -0.43 -0.14 L -0.59 0.18 L -0.59 0.3 L -0.48 0.38
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: gohe_stack_2.png
+            collision: M -0.35 0.38 L -0.03 0.38 L 0.51 0.34 L 0.57 0.23 L 0.56 0.1 L 0.35 -0.26 L 0.26 -0.32 L -0.01 -0.4 L -0.39 -0.14 L -0.45 -0.09 L -0.56 0.23 L -0.51 0.34
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: gohe_stack_3.png
+                collision: M -0.4 0.36 L 0.44 0.33 L 0.54 0.26 L 0.59 0.15 L 0.58 0.11 L 0.32 -0.26 L 0.03 -0.38 L -0.37 -0.14 L -0.49 0.08 L -0.5 0.26
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: gohe_stack_4.png
+                    collision: M -0.33 0.32 L 0.42 0.29 L 0.52 0.22 L 0.54 0.1 L 0.32 -0.2 L 0.14 -0.34 L 0.06 -0.36 L -0.25 -0.18 L -0.51 0.09 L -0.49 0.21 L -0.43 0.3
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: gohe_stack_5.png
+                        collision: M -0.32 0.3 L 0.31 0.26 L 0.46 0.2 L 0.47 0.09 L 0.31 -0.14 L 0.16 -0.28 L 0 -0.27 L -0.2 -0.17 L -0.42 0.09 L -0.41 0.21
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: gohe_stack_6.png
+                            collision: M -0.14 0.25 L 0.16 0.25 L 0.38 0.19 L 0.4 0.09 L 0.26 -0.07 L 0.08 -0.19 L -0.12 -0.21 L -0.23 -0.14 L -0.38 0.07 L -0.38 0.2
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: gohe_stack_7.png
+                                collision: M -0.23 0.23 L 0.09 0.23 L 0.3 0.2 L 0.34 0.1 L 0.32 0.01 L 0.1 -0.14 L 0.01 -0.16 L -0.25 -0.06 L -0.33 0.03 L -0.32 0.17
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: gohe_stack_8.png
+                                    collision: M -0.23 0.18 L 0.05 0.19 L 0.18 0.15 L 0.23 0.08 L 0.14 -0.05 L -0.05 -0.07 L -0.23 -0.03 L -0.3 0.02 L -0.3 0.15
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *gohe
+        positionInStack:
+          x: -.2
+        angleInStack: -10
+      - <<: *gohe
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *gohe
+        positionInStack: .4,0
+        angleInStack: 45
+    groundColor: "#838383"
+    soldBy:
+      - npcTag: IsDwarfMiner
+        chanceToAppear: .2
+        minCount: 1
+        maxCount: 15
+    grindStartPercent: .2
+    isTeleportationIngredient: true
+    path:
+      data: C 0 -0.8 1.6 -1.6 2.4 -0.8 C 1 -6 10 -6 8.8 -0.8 C 9.6 -1.6 11.2 -0.8 11.2 0
+  - name:
+      en: Pluper Sailor
+      es: Plúper Marino
+    id: PLUPERMARINO
+    description:  
+      en: A benthic marine organism that can stretch a very long distance in order to find a suitable individual with which to reproduce.
+      es: Un organísmo marino bentónico que puede estirarse una distancia muy larga con el fin de encontrar algún individuo apropiado con el que reproducirse.
+    ingredientListIcon: pluper_icon.png
+    inventoryImage: pluper_inv.png
+    recipeStepImage: pluper_rec.png
+    inheritFrom: Tangleweed
+    basePrice: 8.2
+    stackItems:
+      - &pluper
+        sprite: pluper_stack_1.png
+        collision: M -0.04 0.57 L 0.06 0.6 L 0.15 0.55 L 0.16 0.34 L 0.14 -0.01 L -0.09 -0.58 L -0.15 -0.48 L -0.18 -0.21 L -0.1 0.37
+        selfCollision: 
+          scale: 0.7,0.7
+        grindsInto:
+          - sprite: pluper_stack_2.png
+            collision: M 0.05 0.59 L 0.11 0.59 L 0.15 0.37 L 0.13 0.03 L 0.06 -0.15 L -0.07 -0.48 L -0.13 -0.5 L -0.18 -0.25 L -0.07 0.38 L -0.03 0.49
+            selfCollision: 
+              scale: 0.7,0.7
+            grindsInto:
+              - sprite: pluper_stack_3.png
+                collision: M 0.03 0.58 L 0.08 0.58 L 0.13 0.53 L 0.14 0.36 L 0.11 0.04 L 0.05 -0.15 L -0.07 -0.44 L -0.16 -0.41 L -0.16 -0.23 L -0.05 0.42 L -0.01 0.55
+                selfCollision: 
+                  scale: 0.7,0.7
+                grindsInto:
+                  - sprite: pluper_stack_4.png
+                    collision: M 0.03 0.53 L 0.07 0.54 L 0.11 0.51 L 0.1 0.08 L -0.04 -0.3 L -0.09 -0.35 L -0.12 -0.34 L -0.14 -0.14 L -0.04 0.44
+                    selfCollision: 
+                      scale: 0.7,0.7
+                    grindsInto:
+                      - sprite: pluper_stack_5.png
+                        collision: M 0.01 0.5 L 0.05 0.52 L 0.08 0.5 L 0.09 0.38 L 0.07 0.06 L 0.04 -0.06 L -0.06 -0.27 L -0.1 -0.27 L -0.14 -0.19 L -0.04 0.4
+                        selfCollision: 
+                          scale: 0.7,0.7
+                        grindsInto:
+                          - sprite: pluper_stack_6.png
+                            collision: M 0 0.47 L 0.05 0.47 L 0.1 0.45 L 0.07 0.08 L 0.03 -0.07 L -0.04 -0.2 L -0.1 -0.23 L -0.11 -0.17 L -0.04 0.38
+                            selfCollision: 
+                              scale: 0.7,0.7
+                            grindsInto:
+                              - sprite: pluper_stack_7.png
+                                collision: M 0 0.44 L 0.06 0.45 L 0.09 0.4 L 0.05 0.07 L 0.03 -0.04 L -0.04 -0.14 L -0.09 -0.12 L -0.04 0.35
+                                selfCollision: 
+                                  scale: 0.7,0.7
+                                grindsInto:
+                                  - sprite: pluper_stack_8.png
+                                    collision: M -0.01 0.42 L 0.05 0.42 L 0.07 0.39 L 0.03 -0.03 L 0 -0.08 L -0.03 -0.09 L -0.07 -0.04 L -0.04 0.36
+                                    selfCollision: 
+                                      scale: 0.7,0.7
+        positionInStack: -.4, 0
+        angleInStack: 45
+      - <<: *pluper
+        positionInStack:
+          x: -.2
+        angleInStack: 10
+      - <<: *pluper
+        positionInStack: .2,0
+        angleInStack: -10
+      - <<: *pluper
+        positionInStack: .4,0
+        angleInStack: -45
+      - <<: *pluper
+        positionInStack: -.3,.1
+        angleInStack: 27
+      - <<: *pluper
+        positionInStack: .3,.1
+        angleInStack: -27
+      - <<: *pluper
+        positionInStack: -.3,0
+        angleInStack: 60
+      - <<: *pluper
+        positionInStack: .3,0
+        angleInStack: -60
+      - <<: *pluper
+        positionInStack: 0,.2
+        angleInStack: 0
+    groundColor: "#77BCDD"
+    soldBy:
+      - npcTag: IsAlchemist
+        chanceToAppear: .2
+        minCount: 2
+        maxCount: 15
+    grindStartPercent: .2
+    isTeleportationIngredient: false
+    path:
+      data: C 0.93 -0.23 2.1 0 2.8 -0.7 C 4.2 -2.1 2.33 -4.9 2.1 -7.7 C 1.4 -7 0.7 -5.6 0.7 -2.8 C 0.7 -2.1 0.53 -1.68 0.41 -1.39
+  - name:
+      en: King of Worms
+      es: Rey Lombriz
+    id: REYLOMBRIZ
+    description: 
+      en: It is not a handful of ordinary worms, but several individuals united for life, which manage to survive as a single individual. It is very rare to see, and like other very rare substances, it also possesses powerful properties that can be used in alchemy.
+      es: No se trata de un puñado de gusanos comunes, sino, de varios individuos unidos de por vida, que logran sobrevivir como ún único individuo. Es algo muy raro de ver, y de la misma forma que otras sustancias muy raras, también posee potentes propiedades aprovechables mediante la alquimia.
+    ingredientListIcon: worms_icon.png
+    inventoryImage: worms_inv.png
+    recipeStepImage: worms_rec.png
+    inheritFrom: Tangleweed
+    basePrice: 14
+    stackItems:
+      - &worms
+        sprite: worms_stack_1.png
+        collision: M -0.16 0.47 L 0.16 0.45 L 0.4 0.29 L 0.5 -0.03 L 0.37 -0.3 L 0.1 -0.43 L -0.17 -0.42 L -0.39 -0.27 L -0.46 0.04 L -0.4 0.29
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: worms_stack_2.png
+            collision: M -0.16 0.47 L 0.16 0.45 L 0.4 0.29 L 0.5 -0.03 L 0.37 -0.3 L 0.1 -0.43 L -0.17 -0.42 L -0.39 -0.27 L -0.46 0.04 L -0.4 0.29
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: worms_stack_3.png
+                collision: M -0.05 0.46 L 0.24 0.37 L 0.39 0.25 L 0.42 0.02 L 0.42 -0.2 L 0.3 -0.35 L 0.09 -0.41 L -0.16 -0.41 L -0.34 -0.23 L -0.43 -0.07 L -0.4 0.18 L -0.25 0.34
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: worms_stack_4.png
+                    collision: M -0.2 0.38 L -0.09 0.4 L 0.13 0.39 L 0.32 0.27 L 0.4 0.07 L 0.4 -0.16 L 0.25 -0.34 L -0.13 -0.37 L -0.3 -0.22 L -0.37 -0.05 L -0.36 0.18
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: worms_stack_5.png
+                        collision: M 0.06 0.34 L 0.19 0.3 L 0.34 0.15 L 0.35 0.07 L 0.36 -0.12 L 0.24 -0.3 L 0.02 -0.33 L -0.18 -0.29 L -0.26 -0.14 L -0.32 0.11 L -0.25 0.24 L -0.09 0.31
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: worms_stack_6.png
+                            collision: M -0.11 0.29 L 0 0.3 L 0.26 0.22 L 0.29 0.18 L 0.31 -0.09 L 0.29 -0.15 L 0.02 -0.3 L -0.04 -0.31 L -0.18 -0.21 L -0.28 -0.04 L -0.28 0.03 L -0.23 0.22
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: worms_stack_7.png
+                                collision: M 0 0.23 L 0.1 0.22 L 0.2 0.11 L 0.18 -0.06 L 0.07 -0.17 L -0.09 -0.16 L -0.15 -0.1 L -0.18 0.03 L -0.13 0.18
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: worms_stack_8.png
+                                    collision: M 0.02 0.15 L 0.11 0.05 L 0.11 -0.06 L 0.03 -0.1 L -0.07 -0.1 L -0.14 0.01 L -0.09 0.13
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *worms
+        positionInStack:
+          x: -.2
+        angleInStack: -10
+      - <<: *worms
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *worms
+        positionInStack: .4,0
+        angleInStack: 45
+      - <<: *worms
+        positionInStack: 0,0
+        angleInStack: 0
+    groundColor: "#C4A0A0"
+    soldBy:
+      - npcTag: IsAlchemist
+        chanceToAppear: .1
+        minCount: 1
+        maxCount: 10
+    grindStartPercent: .2
+    isTeleportationIngredient: false
+    path:
+      data: C 0 0.5 -0.7 0.7 0 1.4 C 0 1.4 0.7 2.1 0 2.8 C 0 2.8 -0.7 3.5 0 4.2 C 0.6 4.6 0.1 5.6 -0.7 4.9 C -1.5 5.1 -1.6 4.4 -2.1 4.2 C -3 4.2 -2.6 3.3 -2.8 2.8 C -3 2 -2.3 1.9 -2.1 1.4 C -2.1 0.6 -1.2 0.9 -0.7 0.7 C -0.3 0.1 0.2 0.7 0.7 0.7 C 1.4 0.4 1.5 1.4 2.1 1.4 C 2.8 1.5 2.6 2.3 2.8 2.8 C 3.1 3.4 2.3 3.7 2.1 4.2 C 2 4.9 1.2 4.7 0.7 4.9 C 0.6 5.5 -0.4 5.8 -0.7 5
+  - name:
+      en: Calcite
+      es: Calcita
+    id: CALCITA
+    description: 
+      en: A substance that crystallises in a rhombohedral system and has a glassy lustre. It has many applications, including use as a fertiliser for fields with overly acidic soils.
+      es: Una sustancia que cristaliza en un sistema romboédrico y presenta un brillo vítreo. Tiene muchas aplicaciones, entre ellas, se utiliza como abono para campos de cultivo con suelos demasiado ácidos.
+    ingredientListIcon: calcita_icon.png
+    inventoryImage: calcita_inv.png
+    recipeStepImage: calcita_rec.png
+    inheritFrom: FrostSapphire
+    basePrice: 40
+    stackItems:
+      - &calcita
+        sprite: calcita_stack_1.png
+        collision: M 0.06 0.41 L 0.24 0.38 L 0.56 -0.09 L 0.57 -0.24 L 0.54 -0.36 L 0.42 -0.42 L 0.3 -0.46 L -0.37 -0.46 L -0.53 -0.31 L -0.6 -0.1 L -0.58 0.24 L -0.54 0.3
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: calcita_stack_2.png
+            collision: M 0.1 0.39 L 0.3 0.27 L 0.57 -0.1 L 0.59 -0.18 L 0.53 -0.35 L 0.43 -0.4 L 0.29 -0.41 L -0.36 -0.4 L -0.51 -0.29 L -0.59 -0.05 L -0.54 0.29 L -0.46 0.33
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: calcita_stack_2a.png
+                collision: M 0.12 0.34 L 0.18 0.3 L 0.11 -0.2 L -0.23 -0.34 L -0.33 -0.37 L -0.47 -0.3 L -0.56 0.01 L -0.53 0.28 L -0.46 0.3
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: calcita_stack_2aa.png
+                    collision: M -0.46 0.26 L -0.19 0.23 L -0.17 -0.17 L -0.23 -0.28 L -0.32 -0.34 L -0.45 -0.29 L -0.54 0.02 L -0.52 0.24
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: calcita_stack_2aaa.png
+                        collision: M -0.42 -0.06 L -0.22 -0.06 L -0.18 -0.15 L -0.2 -0.22 L -0.3 -0.31 L -0.39 -0.24 L -0.45 -0.11
+                        selfCollision: 
+                          scale: 0.5,0.5
+                      - sprite: calcita_stack_2aab.png
+                        collision: M -0.43 0.24 L -0.27 0.2 L -0.2 0.11 L -0.21 0.03 L -0.32 -0.08 L -0.51 0.03 L -0.51 0.18 L -0.47 0.23
+                        selfCollision: 
+                          scale: 0.5,0.5
+                  - sprite: calcita_stack_2ab.png
+                    collision: M 0.07 0.31 L 0.14 0.31 L 0.16 0.23 L 0.09 -0.17 L -0.05 -0.25 L -0.09 -0.24 L -0.2 -0.05 L -0.17 0.26
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: calcita_stack_2aba.png
+                        collision: M -0.11 0.08 L 0.11 -0.13 L 0.1 -0.18 L -0.04 -0.21 L -0.15 -0.12 L -0.2 -0.04 L -0.17 0.05
+                        selfCollision: 
+                          scale: 0.5,0.5
+                      - sprite: calcita_stack_2abb.png
+                        collision: M -0.12 0.24 L 0.1 0.29 L 0.13 0.25 L 0.1 0.14 L 0.05 -0.01 L 0 -0.03 L -0.1 0.1 L -0.14 0.2
+                        selfCollision: 
+                          scale: 0.5,0.5
+              - sprite: calcita_stack_2b.png
+                collision: M 0.25 0.28 L 0.55 -0.12 L 0.57 -0.18 L 0.51 -0.35 L 0.43 -0.39 L 0.32 -0.39 L 0.11 -0.39 L 0.15 0 L 0.2 0.25
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: calcita_stack_2ba.png
+                    collision: M 0.46 -0.09 L 0.56 -0.18 L 0.51 -0.33 L 0.35 -0.38 L 0.14 -0.34 L 0.18 -0.23
+                    selfCollision: 
+                      scale: 0.5,0.5
+                  - sprite: calcita_stack_2bb.png
+                    collision: M 0.26 0.23 L 0.39 0.1 L 0.44 -0.08 L 0.24 -0.22 L 0.18 -0.13 L 0.18 0.07 L 0.22 0.21  
+                    selfCollision: 
+                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *calcita
+        positionInStack:
+          x: -.2
+        angleInStack: -10
+      - <<: *calcita
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *calcita
+        positionInStack: .4,0
+        angleInStack: 45
+    groundColor: "#F2F1E9"
+    soldBy:
+      - npcTag: IsDwarfMiner
+        chanceToAppear: .3
+        minCount: 1
+        maxCount: 15
+    grindStartPercent: .2
+    isTeleportationIngredient: true
+    path:
+      data: C 2.3 0.1 3.3 0.6 4 1 C 3.2 1.3 2.7 1.4 2.2 1.5 C 2.9 2.2 3.7 3.3 3.9 4 C 3.1 3.8 1.9 3.2 1.1 2.6 C 0.8 4.1 0.5 5.2 0 6 C -0.5 5.2 -0.7 4.4 -0.8 4
+  - name:
+      en: Black Opal
+      es: Ópalo Negro
+    id: OPALONEGRO
+    description:
+      en: An extraordinarily rare glass, formed through the fossilisation of organic matter. It is the natural substance that exhibits the most powerful iridescence effects, while combining it with a pearly lustre.
+      es: Un vídrio extraordinariamente raro, formardo a través de la fosilización de materia orgánica. Es la sustancia natural que presenta los efectos de iridescencia más potentes, al tiempo que lo combina con un brillo nacarado.
+    ingredientListIcon: bopal_icon.png
+    inventoryImage: bopal_inv.png
+    recipeStepImage: bopal_rec.png
+    inheritFrom: BloodRuby
+    basePrice: 52
+    stackItems:
+      - &bopal
+        sprite: bopal_stack_1.png
+        collision: M 0.01 0.43 L 0.29 0.4 L 0.51 0.21 L 0.58 0.03 L 0.58 -0.14 L 0.48 -0.36 L -0.24 -0.41 L -0.43 -0.38 L -0.55 -0.27 L -0.6 -0.08 L -0.57 0.09 L -0.45 0.26 L -0.22 0.39
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: bopal_stack_2.png
+            collision: M 0.05 0.42 L 0.38 0.33 L 0.58 0.06 L 0.54 -0.28 L 0.46 -0.3 L -0.14 -0.41 L -0.43 -0.35 L -0.53 -0.29 L -0.6 -0.04 L -0.57 0.06 L -0.33 0.33 L -0.21 0.38
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: bopal_stack_3.png
+                collision: M -0.01 0.42 L 0.33 0.34 L 0.54 0.07 L 0.51 -0.23 L 0.47 -0.26 L -0.13 -0.39 L -0.46 -0.34 L -0.53 -0.28 L -0.55 -0.02 L -0.28 0.36
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: bopal_stack_4.png
+                    collision: M -0.05 0.4 L 0.22 0.34 L 0.52 0.08 L 0.55 -0.02 L 0.44 -0.18 L -0.03 -0.31 L -0.2 -0.33 L -0.47 -0.28 L -0.53 -0.18 L -0.5 0 L -0.27 0.28
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: bopal_stack_5.png
+                        collision: M -0.11 0.36 L 0.26 0.3 L 0.48 0.08 L 0.48 0.02 L 0.35 -0.17 L -0.01 -0.26 L -0.17 -0.3 L -0.39 -0.25 L -0.49 -0.16 L -0.48 -0.02 L -0.4 0.11
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: bopal_stack_6.png
+                            collision: M -0.01 0.31 L 0.22 0.25 L 0.44 0.06 L 0.35 -0.14 L -0.18 -0.28 L -0.35 -0.23 L -0.47 -0.12 L -0.47 0 L -0.39 0.11 L -0.12 0.29
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: bopal_stack_7.png
+                                collision: M -0.13 0.24 L 0.09 0.24 L 0.42 0.1 L 0.45 0.01 L 0.33 -0.07 L -0.03 -0.19 L -0.25 -0.23 L -0.46 -0.07 L -0.46 0.01
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: bopal_stack_8.png
+                                    collision: M -0.03 0.2 L 0.26 0.14 L 0.35 -0.01 L 0.26 -0.09 L -0.19 -0.21 L -0.38 -0.08 L -0.37 0.09
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4,0
+        angleInStack: -45
+      - <<: *bopal
+        positionInStack: -.2,0
+        angleInStack: -10
+      - <<: *bopal
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *bopal
+        positionInStack: .4,0
+        angleInStack: 45
+      - <<: *bopal
+        positionInStack: 0,0
+        angleInStack: 0
+    groundColor: "#5A5A5A"
+    soldBy:
+      - npcTag: IsDwarfMiner
+        chanceToAppear: .1
+        minCount: 1
+        maxCount: 15
+    grindStartPercent: .2
+    isTeleportationIngredient: true
+    path:
+      data: C 1 0 4.1 -0.35 6 -1 C 11.5 -3 7 -9.5 3 -5.5
+  - name:
+      en: Ankerite
+      es: Ankerita
+    id: ANKERITA
+    description: 
+      en: This mineral is said to appear at the site of a dragon's death, and is believed to be the crystallised blood once shed by this mythical creature. Its powerful properties of hardness and strength can be harnessed in alchemy, adding to the myth.
+      es: Se dice que este mineral aparece en el lugar donde murió un dragón, y se cree que se trata de la sangre cristalizada antiguamente derramada por esta mítica criatura. En la alquimia se pueden aprovechar sus potentes propiedades de dureza y resistencia, lo que contribuye a reforzar el mito.
+    ingredientListIcon: anker_icon.png
+    inventoryImage: anker_inv.png
+    recipeStepImage: anker_rec.png
+    inheritFrom: BloodRuby
+    basePrice: 40
+    stackItems:
+      - &anker
+        sprite: anker_stack_1.png
+        collision: M -0.05 0.45 L 0.22 0.31 L 0.46 0.12 L 0.58 -0.41 L 0.5 -0.42 L -0.52 -0.35 L -0.6 -0.25 L -0.57 0.07 L -0.41 0.27
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: anker_stack_2.png
+            collision: M -0.03 0.4 L 0.13 0.36 L 0.43 0.12 L 0.47 0.04 L 0.53 -0.25 L 0.54 -0.4 L -0.49 -0.34 L -0.59 -0.22 L -0.54 0.11 L -0.41 0.25
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: anker_stack_3.png
+                collision: M 0.02 0.36 L 0.13 0.33 L 0.37 0.16 L 0.42 0.09 L 0.48 -0.23 L 0.46 -0.27 L -0.48 -0.31 L -0.51 -0.29 L -0.55 -0.2 L -0.47 0.11 L -0.4 0.21 L -0.15 0.31
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: anker_stack_4.png
+                    collision: M 0.01 0.34 L 0.18 0.25 L 0.3 0.16 L 0.37 0.03 L 0.44 -0.23 L 0.36 -0.25 L -0.48 -0.27 L -0.52 -0.21 L -0.4 0.16 L -0.12 0.3
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: anker_stack_5.png
+                        collision: M 0.08 0.29 L 0.33 0.09 L 0.39 -0.2 L -0.43 -0.23 L -0.5 -0.18 L -0.33 0.17 L -0.21 0.23 L 0 0.28
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: anker_stack_6.png
+                            collision: M 0.08 0.24 L 0.26 0.14 L 0.33 0.05 L 0.37 -0.1 L 0.32 -0.18 L -0.35 -0.19 L -0.41 -0.05 L -0.3 0.17 L -0.23 0.2
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: anker_stack_7.png
+                                collision: M -0.09 0.22 L 0.15 0.19 L 0.32 0.04 L 0.34 -0.08 L 0.25 -0.12 L -0.28 -0.14 L -0.36 -0.09 L -0.35 0.03 L -0.23 0.17
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: anker_stack_8.png
+                                    collision: M -0.08 0.22 L 0.14 0.2 L 0.29 0.01 L 0.26 -0.08 L -0.13 -0.09 L -0.26 -0.06 L -0.31 0.04 L -0.17 0.18
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *anker
+        positionInStack:
+          x: -.2
+        angleInStack: -10
+      - <<: *anker
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *anker
+        positionInStack: .4,0
+        angleInStack: 45
+      - <<: *anker
+        positionInStack: 0,0
+        angleInStack: 0
+    groundColor: "#895F79"
+    soldBy:
+      - npcTag: IsDwarfMiner
+        chanceToAppear: .2
+        minCount: 1
+        maxCount: 13
+    grindStartPercent: .2
+    isTeleportationIngredient: true
+    path:
+      data: C -1 1 -1.5 1.9 -2 3 C -1.7 2.9 -1.4 2.8 -1.1 2.6 C -1.4 3.1 -1.9 4.2 -2 5 C -1.7 4.7 -1.5 4.5 -1.2 4.2 C -1.5 4.8 -1.6 5.8 -1.6 6.7 C -1.4 6.4 -1.2 6.1 -1 5.8 C -1.2 6.5 -1.2 7.4 -1 8.2 C -0.8 7.8 -0.7 7.5 -0.6 7.2 C -0.6 7.9 -0.5 8.8 -0.2 9.5 C -0.1 9.2 -0.1 8.8 -0 8.5
+  - name:
+      en: Beryl
+      es: Berilo
+    id: BERILO
+    description:
+      en: A very important mineral for prediction and divination rituals in druidic circles. Frequently used for the crafting of crystal balls for clairvoyance.
+      es: Un mineral muy importante para los rituales de predicción y adivinación en los círculos druídicos. Frecuentemente utilizados para la fabricación de bolas de cristal para la clarividencia.
+    ingredientListIcon: berilo_icon.png
+    inventoryImage: berilo_inv.png
+    recipeStepImage: berilo_rec.png
+    inheritFrom: FrostSapphire
+    basePrice: 44
+    stackItems:
+      - &berilo
+        sprite: berilo_stack_1.png
+        collision: M 0.06 0.58 L 0.25 0.54 L 0.47 0.29 L 0.47 -0.2 L 0.31 -0.59 L 0.11 -0.6 L -0.25 -0.52 L -0.42 -0.44 L -0.5 -0.14 L -0.47 0.03 L -0.35 0.48
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: berilo_stack_2.png
+            collision: M 0.1 0.56 L 0.2 0.53 L 0.41 0.38 L 0.46 0.1 L 0.46 -0.2 L 0.29 -0.55 L 0.2 -0.58 L -0.16 -0.54 L -0.36 -0.47 L -0.49 -0.1 L -0.35 0.36 L -0.14 0.54
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: berilo_stack_3.png
+                collision: M 0.14 0.51 L 0.41 0.29 L 0.45 0.12 L 0.43 -0.21 L 0.26 -0.53 L -0.01 -0.54 L -0.34 -0.46 L -0.42 -0.13 L -0.35 0.28 L -0.23 0.43 L -0.07 0.5
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: berilo_stack_4.png
+                    collision: M -0.04 0.47 L 0.26 0.39 L 0.37 0.29 L 0.38 -0.03 L 0.34 -0.34 L 0.24 -0.5 L 0.16 -0.54 L -0.03 -0.54 L -0.31 -0.45 L -0.42 -0.06 L -0.32 0.25 L -0.24 0.35
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: berilo_stack_5.png
+                        collision: M 0.01 0.35 L 0.33 0.29 L 0.37 0.01 L 0.33 -0.29 L 0.17 -0.53 L -0.04 -0.54 L -0.3 -0.4 L -0.37 -0.06 L -0.24 0.22
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: berilo_stack_6a.png
+                            collision: M 0.24 0.31 L 0.3 0.29 L 0.34 0.19 L 0.36 0 L 0.3 -0.05 L 0.15 -0.06 L 0.06 0.02 L 0.08 0.25
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: berilo_stack_7a.png
+                                collision: M 0.2 0.3 L 0.26 0.31 L 0.33 0.2 L 0.32 0.06 L 0.19 -0.02 L 0.14 -0.01 L 0.1 0.05 L 0.12 0.21
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                          - sprite: berilo_stack_6b.png
+                            collision: M -0.11 0.28 L -0.03 0.23 L -0.04 0.08 L -0.17 -0.18 L -0.29 -0.19 L -0.37 -0.12 L -0.35 0.01 L -0.2 0.23
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: berilo_stack_7b.png
+                                collision: M -0.09 0.22 L -0.07 0.06 L -0.18 -0.12 L -0.26 -0.13 L -0.32 -0.1 L -0.32 -0.01 L -0.24 0.12 L -0.13 0.22
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                          - sprite: berilo_stack_6c.png
+                            collision: M 0.11 0.32 L 0.26 0.17 L 0.34 -0.1 L 0.33 -0.22 L 0.29 -0.32 L 0.21 -0.45 L 0.01 -0.52 L -0.13 -0.49 L -0.25 -0.41 L -0.32 -0.27 L -0.28 0.03 L -0.13 0.24
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: berilo_stack_7c.png
+                                collision: M 0.04 0.28 L 0.19 0.18 L 0.31 -0.05 L 0.31 -0.15 L 0.23 -0.34 L 0.04 -0.49 L -0.07 -0.47 L -0.21 -0.36 L -0.27 -0.3 L -0.29 -0.15 L -0.23 0.05 L -0.15 0.18
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: berilo_stack_7ca.png
+                                    collision: M 0.07 0.26 L 0.14 0.15 L 0.14 -0.08 L 0.1 -0.23 L 0.05 -0.32 L -0.1 -0.37 L -0.21 -0.35 L -0.28 -0.23 L -0.25 -0.04 L -0.18 0.11 L -0.03 0.23
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+                                    grindsInto:
+                                      - sprite: berilo_stack_8ca.png
+                                        collision: M -0.02 0.19 L 0.09 0.11 L 0.12 -0.08 L 0.07 -0.21 L -0.05 -0.33 L -0.18 -0.33 L -0.24 -0.24 L -0.24 -0.12 L -0.16 0.1
+                                        selfCollision: 
+                                          scale: 0.5,0.5
+                                        grindsInto:
+                                          - sprite: berilo_stack_9ca.png
+                                            collision: M -0.02 0.07 L 0.06 0 L 0.07 -0.13 L -0.07 -0.3 L -0.19 -0.32 L -0.23 -0.23 L -0.17 -0.02
+                                            selfCollision: 
+                                              scale: 0.5,0.5
+                                            grindsInto:
+                                              - sprite: berilo_stack_10ca.png
+                                                collision: M -0.06 0.01 L 0.02 -0.05 L 0.01 -0.17 L -0.15 -0.28 L -0.18 -0.23 L -0.15 -0.03
+                                                selfCollision: 
+                                                  scale: 0.5,0.5
+                                  - sprite: berilo_stack_7cb.png
+                                    collision: M 0.19 0.17 L 0.27 -0.01 L 0.27 -0.21 L 0.22 -0.32 L 0.01 -0.46 L -0.09 -0.4 L -0.06 -0.3 L 0.06 -0.04
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+                                    grindsInto:
+                                      - sprite: berilo_stack_8cb.png
+                                        collision: M 0.17 0.07 L 0.27 0 L 0.25 -0.25 L 0.02 -0.41 L -0.02 -0.29 L 0.05 -0.09
+                                        selfCollision: 
+                                          scale: 0.5,0.5
+                                        grindsInto:
+                                          - sprite: berilo_stack_9cb.png
+                                            collision: M 0.17 0.02 L 0.25 -0.09 L 0.24 -0.23 L 0.11 -0.33 L 0.06 -0.3 L 0.03 -0.16 L 0.11 -0.02
+                                            selfCollision: 
+                                              scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: 45
+      - <<: *berilo
+        positionInStack: .4,0
+        angleInStack: -45
+    groundColor: "#63e3a7"
+    soldBy:
+      - npcTag: IsDwarfMiner
+        chanceToAppear: .1
+        minCount: 1
+        maxCount: 8
+    grindStartPercent: .2
+    isTeleportationIngredient: true
+    path:
+      data: L 4 0 L 6 -3 L 4 -6
+  - name:
+      en: Cyber Bismuth
+      es: Ciber Bismuto
+    id: CYBISMUTO
+    description: 
+      en: This mineral is said to appear at the site of a dragon's death, and is believed to be the crystallised blood once shed by this mythical creature. Its powerful properties of hardness and strength can be harnessed in alchemy, adding to the myth.
+      es: Forma unos bellos y únicos cristales en forma de espirales piramidales.
+    ingredientListIcon: bismuto_icon.png
+    inventoryImage: bismuto_inv.png
+    recipeStepImage: bismuto_rec.png
+    inheritFrom: BloodRuby
+    basePrice: 41
+    stackItems:
+      - &bismuto
+        sprite: bismuto_stack_1.png
+        collision: M -0.05 0.58 L 0.24 0.35 L 0.35 0.17 L 0.39 0.02 L 0.31 -0.23 L 0.2 -0.46 L -0.14 -0.6 L -0.37 -0.28 L -0.41 -0.06 L -0.29 0.34 L -0.18 0.55
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: bismuto_stack_2.png
+            collision: M 0.01 0.53 L 0.22 0.36 L 0.36 0.04 L 0.29 -0.25 L 0.22 -0.36 L 0.04 -0.53 L -0.08 -0.58 L -0.17 -0.55 L -0.35 -0.3 L -0.39 -0.02 L -0.22 0.51
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: bismuto_stack_3.png
+                collision: M -0.1 0.51 L 0.13 0.44 L 0.34 0.12 L 0.35 -0.02 L 0.2 -0.36 L 0.05 -0.49 L -0.1 -0.54 L -0.24 -0.42 L -0.33 -0.24 L -0.35 -0.03 L -0.24 0.42
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: bismuto_stack_4.png
+                    collision: M -0.12 0.46 L -0.02 0.46 L 0.17 0.34 L 0.31 0.11 L 0.32 0 L 0.25 -0.27 L 0.15 -0.39 L 0.03 -0.47 L -0.1 -0.51 L -0.15 -0.49 L -0.24 -0.4 L -0.31 -0.09 L -0.28 0.14 L -0.2 0.4
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: bismuto_stack_5.png
+                        collision: M -0.03 0.39 L 0.14 0.3 L 0.26 0.11 L 0.25 -0.02 L 0.2 -0.19 L 0.17 -0.3 L 0 -0.46 L -0.09 -0.43 L -0.27 -0.15 L -0.28 -0.05 L -0.22 0.26 L -0.11 0.38
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: bismuto_stack_6.png
+                            collision: M -0.06 0.34 L 0.1 0.26 L 0.16 0.2 L 0.19 -0.01 L 0.16 -0.26 L 0.04 -0.43 L -0.05 -0.41 L -0.27 -0.07 L -0.12 0.31
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: bismuto_stack_7.png
+                                collision: M -0.03 0.25 L 0.08 0.17 L 0.12 0.11 L 0.15 -0.11 L 0.1 -0.27 L 0.05 -0.29 L -0.05 -0.27 L -0.12 -0.2 L -0.14 -0.01 L -0.16 0.14 L -0.11 0.24
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: bismuto_stack_8.png
+                                    collision: M -0.02 0.2 L 0.07 0.18 L 0.12 0.11 L 0.08 -0.11 L 0.04 -0.2 L -0.01 -0.23 L -0.1 -0.13 L -0.13 0.07 L -0.1 0.13
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *bismuto
+        positionInStack: .4,0
+        angleInStack: 45
+      - <<: *bismuto
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *bismuto
+        positionInStack: -.2,0
+        angleInStack: 100
+    groundColor: "#a0a9ba"
+    soldBy:
+      - npcTag: IsDwarfMiner
+        chanceToAppear: .2
+        minCount: 1
+        maxCount: 11
+    grindStartPercent: .2
+    isTeleportationIngredient: true
+    path:
+      scale: 1.1,1.1
+      data: L 1.92 0.64 L 1.28 2.56 L 3.2 5.12 L 6.4 2.56 L 3.84 1.28 L 2.56 2.56 L 3.84 3.84 L 5.12 2.56 L 3.84 1.92 L 3.2 2.56 L 3.84 3.2 L 4.48 2.56
+  - name:
+      en: Ladybird Asparagus
+      es: Esparraguillo de Luz
+    id: BLOOP
+    description: 
+      en: Asparagus Coccinelis. This mineral is said to appear at the site of a dragon's death, and is believed to be the crystallised blood once shed by this mythical creature. Its powerful properties of hardness and strength can be harnessed in alchemy, adding to the myth.
+      es: Asparagus Coccinelis. Planta de clíma semi árido, cuyos frutos resplandecen en la noche tras haber acumulado energía solar durante los días de sol intenso. Suelen atraer a multitud de insectos fotófilos, que permanecen revoloteando a su alrededor hasta que su luz diminuye.
+    ingredientListIcon: bloop_icon.png
+    inventoryImage: bloop_inv.png
+    recipeStepImage: bloop_rec.png
+    inheritFrom: Tangleweed
+    basePrice: 14
+    stackItems:
+      - &bloop
+        sprite: bloop_stack_1.png
+        collision: M -0.13 0.59 L 0.24 0.58 L 0.36 0.43 L 0.48 0.18 L 0.37 -0.39 L 0.03 -0.6 L -0.21 -0.6 L -0.5 0.05 L -0.42 0.35 L -0.36 0.44
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: bloop_stack_2.png
+            collision: M -0.13 0.57 L 0.23 0.56 L 0.34 0.44 L 0.44 0.23 L 0.36 -0.31 L 0.01 -0.54 L -0.23 -0.52 L -0.46 0.05 L -0.38 0.4
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: bloop_stack_3.png
+                collision: M 0 0.58 L 0.26 0.53 L 0.33 0.45 L 0.36 0.28 L 0.35 -0.18 L 0.28 -0.26 L 0.07 -0.45 L -0.15 -0.44 L -0.22 -0.4 L -0.42 -0.03 L -0.44 0.17 L -0.35 0.44 L -0.19 0.54
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: bloop_stack_4.png
+                    collision: M 0.02 0.55 L 0.2 0.52 L 0.31 0.4 L 0.33 -0.09 L 0.2 -0.21 L 0.02 -0.29 L -0.18 -0.27 L -0.4 0.01 L -0.42 0.17 L -0.31 0.45 L -0.16 0.55
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: bloop_stack_5.png
+                        collision: M 0 0.54 L 0.11 0.51 L 0.21 0.44 L 0.21 0.44 L 0.27 0.31 L 0.27 0.11 L 0.19 -0.11 L -0.04 -0.19 L -0.1 -0.17 L -0.3 -0.04 L -0.34 0.05 L -0.37 0.24 L -0.27 0.43 L -0.12 0.52
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: bloop_stack_6.png
+                            collision: M -0.14 0.47 L 0.08 0.46 L 0.16 0.39 L 0.2 0.28 L 0.22 0.08 L 0.17 -0.07 L -0.1 -0.15 L -0.26 -0.03 L -0.34 0.25 L -0.28 0.41
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: bloop_stack_7.png
+                                collision: M -0.2 0.41 L -0.17 0.42 L -0.02 0.41 L 0.13 0.38 L 0.17 0.32 L 0.16 0.16 L 0.13 0.01 L 0.03 -0.03 L -0.14 -0.04 L -0.24 0.04 L -0.28 0.14 L -0.28 0.27
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: bloop_stack_8.png
+                                    collision: M -0.05 0.35 L 0.06 0.34 L 0.13 0.3 L 0.13 0.12 L -0.06 0.03 L -0.19 0.02 L -0.22 0.17 L -0.13 0.32
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4, 0
+        angleInStack: -45
+      - <<: *bloop
+        positionInStack: .4,0
+        angleInStack: 45
+      - <<: *bloop
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *bloop
+        positionInStack: -.2,0
+        angleInStack: 10
+    groundColor: "#e01f3c"
+    soldBy:
+      - npcTag: IsHerbalist
+        chanceToAppear: .2
+        minCount: 3
+        maxCount: 15
+    grindStartPercent: .2
+    isTeleportationIngredient: false
+    path:
+      data: L -0.7 -3.5 C -0.11 -3.93 -0.34 -4.66 -1.04 -4.66 C -0.64 -5.54 -1.44 -6.05 -2.1 -5.6 C -2.21 -6.31 -3.24 -6.45 -3.47 -5.83 C -5.09 -6.54 -5.17 -4.13 -3.63 -4.68 C -3.71 -4.22 -3.13 -3.62 -2.47 -4.05 C -2.67 -3.73 -2.67 -3.02 -1.59 -3.06
+  - name:
+      en: Lettuce Malaquite
+      es: Malaquita Rucular
+    id: MALAQUITARUCULA
+    description: 
+      en: A beautiful mineral that has been used since ancient times to make jewelry and dyes.
+      es: Un bello mineral que se utiliza desde tiempos remotos para fabricar piezas de bisutería y tintes.
+    ingredientListIcon: Malaq_icon.png
+    inventoryImage: Malaq_inv.png
+    recipeStepImage: Malaq_rec.png
+    inheritFrom: BloodRuby
+    basePrice: 39
+    stackItems:
+      - &Malaq
+        sprite: Malaq_stack_1.png
+        collision: M -0.13 0.45 L 0.23 0.39 L 0.36 0.23 L 0.4 -0.03 L 0.36 -0.21 L 0.09 -0.4 L -0.04 -0.41 L -0.32 -0.3 L -0.43 -0.1 L -0.39 0.24 L -0.29 0.38
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: Malaq_stack_2.png
+            collision: M -0.16 0.41 L 0.08 0.39 L 0.26 0.28 L 0.35 0.19 L 0.39 0.06 L 0.29 -0.28 L -0.01 -0.39 L -0.26 -0.32 L -0.36 -0.21 L -0.41 -0.03 L -0.39 0.17 L -0.3 0.32
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: Malaq_stack_3.png
+                collision: M -0.08 0.42 L 0.28 0.29 L 0.38 0.18 L 0.42 0.07 L 0.34 -0.23 L 0.19 -0.36 L -0.06 -0.43 L -0.24 -0.35 L -0.4 -0.24 L -0.46 -0.07 L -0.43 0.07 L -0.31 0.3 L -0.19 0.4
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: Malaq_stack_4.png
+                    collision: M -0.2 0.38 L 0.14 0.38 L 0.19 0.36 L 0.36 0.19 L 0.42 0.06 L 0.4 -0.17 L 0.23 -0.36 L 0.04 -0.45 L -0.14 -0.42 L -0.27 -0.37 L -0.43 -0.23 L -0.47 -0.02 L -0.42 0.21 L -0.36 0.3
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: Malaq_stack_5.png
+                        collision: M -0.17 0.32 L 0.08 0.32 L 0.17 0.26 L 0.29 0.12 L 0.31 -0.06 L 0.26 -0.2 L 0.11 -0.39 L -0.04 -0.44 L -0.3 -0.31 L -0.42 -0.09 L -0.4 0.04 L -0.32 0.23 L -0.24 0.29
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: Malaq_stack_6.png
+                            collision: M -0.1 0.28 L 0.16 0.22 L 0.29 0.02 L 0.28 -0.06 L 0.22 -0.19 L 0.14 -0.28 L -0.15 -0.32 L -0.3 -0.23 L -0.36 -0.05 L -0.34 0.04 L -0.21 0.22
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: Malaq_stack_7.png
+                                collision: M 0.01 0.22 L 0.18 0.15 L 0.23 0.01 L 0.19 -0.14 L 0.13 -0.22 L -0.06 -0.27 L -0.21 -0.21 L -0.31 -0.03 L -0.21 0.17
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: Malaq_stack_8.png
+                                    collision: M -0.16 0.16 L 0.13 0.14 L 0.18 -0.01 L 0.04 -0.2 L -0.12 -0.19 L -0.22 -0.11 L -0.25 0.05
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4,0
+        angleInStack: -45
+      - <<: *Malaq
+        positionInStack: -.2,0
+        angleInStack: -10
+      - <<: *Malaq
+        positionInStack: .2,0
+        angleInStack: 10
+      - <<: *Malaq
+        positionInStack: .4,0
+        angleInStack: 45
+    groundColor: "#22996E"
+    soldBy:
+      - npcTag: IsDwarfMiner
+        chanceToAppear: .3
+        minCount: 1
+        maxCount: 15
+    grindStartPercent: .2
+    isTeleportationIngredient: true
+    path:
+      scale: 1.1,1.1
+      data: L -3 1 C -2 4 2 4 3 1 L 6 2 C 4 8 -4 8 -6 2
+  - name:
+      en: Wine Erythrite
+      es: Eritrina Vinosa
+    id: ERITRINAVINOSA
+    description: 
+      en: A mineral as beautiful as dangerous. It is the best substance that can be used to poison someone by dissolving it in wine, after the victim tastes it, will not be able to stop drinking due to the delicious flavor it brings.
+      es: Un mineral tan bello como peligroso. Es la mejor sustancia que puede usarse para envenenar a alguien disolviéndola en vino, ya que la víctima, una vez que lo pruebe, no podrá dejar de beber debido al delicioso sabor que aporta.
+    ingredientListIcon: erit_icon.png
+    inventoryImage: erit_inv.png
+    recipeStepImage: erit_rec.png
+    inheritFrom: BloodRuby
+    basePrice: 43
+    stackItems:
+      - &erit
+        sprite: erit_stack_1.png
+        collision: M -0.21 0.73 L 0.13 0.74 L 0.47 0.66 L 0.62 0.49 L 0.7 -0.31 L 0.16 -0.74 L -0.24 -0.7 L -0.7 -0.05 L -0.66 0.26 L -0.46 0.55
+        selfCollision: 
+          scale: 0.5,0.5
+        grindsInto:
+          - sprite: erit_stack_2.png
+            collision: M -0.1 0.69 L 0.31 0.62 L 0.56 0.42 L 0.6 0.28 L 0.63 -0.19 L 0.6 -0.32 L 0.14 -0.65 L -0.2 -0.6 L -0.41 -0.42 L -0.63 -0.06 L -0.62 0.18 L -0.45 0.5
+            selfCollision: 
+              scale: 0.5,0.5
+            grindsInto:
+              - sprite: erit_stack_3.png
+                collision: M -0.26 0.58 L 0.51 0.46 L 0.61 0.11 L 0.5 -0.34 L 0.3 -0.54 L 0.07 -0.58 L -0.25 -0.53 L -0.48 -0.23 L -0.59 0.06 L -0.47 0.37
+                selfCollision: 
+                  scale: 0.5,0.5
+                grindsInto:
+                  - sprite: erit_stack_4.png
+                    collision: M 0 0.51 L 0.42 0.41 L 0.51 0.13 L 0.39 -0.35 L 0.16 -0.51 L 0 -0.54 L -0.26 -0.41 L -0.49 -0.1 L -0.5 0.06 L -0.38 0.34
+                    selfCollision: 
+                      scale: 0.5,0.5
+                    grindsInto:
+                      - sprite: erit_stack_5.png
+                        collision: M 0.06 0.46 L 0.39 0.3 L 0.42 -0.1 L 0.29 -0.32 L -0.01 -0.43 L -0.21 -0.32 L -0.36 -0.13 L -0.41 0.11 L -0.29 0.32 L -0.08 0.43
+                        selfCollision: 
+                          scale: 0.5,0.5
+                        grindsInto:
+                          - sprite: erit_stack_6.png
+                            collision: M 0.03 0.35 L 0.33 0.22 L 0.33 -0.13 L 0.03 -0.32 L -0.25 -0.15 L -0.26 0.12 L -0.17 0.29
+                            selfCollision: 
+                              scale: 0.5,0.5
+                            grindsInto:
+                              - sprite: erit_stack_7.png
+                                collision: M 0.05 0.29 L 0.22 0.22 L 0.29 0.14 L 0.23 -0.18 L 0.09 -0.26 L -0.06 -0.22 L -0.16 -0.02 L -0.11 0.19
+                                selfCollision: 
+                                  scale: 0.5,0.5
+                                grindsInto:
+                                  - sprite: erit_stack_8.png
+                                    collision: M 0.11 0.18 L 0.23 0.11 L 0.25 -0.03 L 0.16 -0.18 L 0.04 -0.18 L -0.05 -0.13 L -0.08 -0.03 L -0.01 0.13
+                                    selfCollision: 
+                                      scale: 0.5,0.5
+        positionInStack: -.4,0
+        angleInStack: -45
+      - <<: *erit
+        positionInStack: -.2,0
+        angleInStack: -10
+      - <<: *erit
+        positionInStack: .2,0
+        angleInStack: 10
+    groundColor: "#CC1F7B"
+    soldBy:
+      - npcTag: IsDwarfMiner
+        chanceToAppear: .2
+        minCount: 1
+        maxCount: 15
+    grindStartPercent: .2
+    isTeleportationIngredient: true
+    path:
+      scale: 1.0,1.0
+      data: L 2 2 L -7 2 L -2 7 L -2 -2 L 0 0 C -2 0 0 2 -2 2 C -6 2 -1 5 -5 5  
+      
