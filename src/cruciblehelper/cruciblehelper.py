@@ -59,6 +59,11 @@ class PackageReader:
         self.dependencies = data["dependencies"]
         if "ingredients" in data.keys():
             self.ingredients = [Ingredient(ingredient, file) for ingredient in data["ingredients"] ]
+    
+    def draw_ingredients(self):
+        outputs = [[draw_call.svg for stack in ingredient.draw_stack_items() for draw_call in stack] + [ingredient.draw_path()] for ingredient in self.ingredients ]
+        return "<table>"+ "".join(["<tr><td><table><tr>" + "".join([f"<td>{o}</td>" for o in output[:-1]]) + "</tr></table></td>" + f"<td>{output[-1]}</td>" +"</tr>" for output in outputs])+"</table>\n"
+
 
 class Ingredient:
     def __init__(self, data:dict, file:Path):
@@ -120,6 +125,10 @@ class Ingredient:
         path : str = self.path["data"]
         i, strokes = 0, path.split(" ")
         vals = []
+        if "scale" in self.path.keys(): 
+            sx, sy = self.path["scale"].split(",")
+            sx, sy = float(sx), float(sy)
+        else: sx, sy = 1, 1
         while i < len(strokes):
             v = strokes[i]
             if v == "L":
@@ -128,12 +137,20 @@ class Ingredient:
             if v == "C":
                 x, y = strokes[i+5:i+7]
                 i += 7
-            vals.append(float(x)), vals.append(float(y))
+            vals.append(sx*float(x)), vals.append(sy*float(y))
         mx, Mx, my, My = min(vals[::2]), max(vals[::2]), min(vals[1::2]), max(vals[1::2])
-        mx, my = min(0, mx), min(0, my) 
+        mx, my = min(0, mx), min(0, my)
+        P1 = [float(p) for p in strokes if p not in ["C", "L"]]
+        P2 = [str(p*(sx,sy)[k%2]) for k,p in enumerate(P1)]
+        P3 = [p for p in strokes if p in ["C", "L"]]
+        i, scaled_path = 0, []
+        for p in P3:
+            if p == 'C': scaled_path += ["C"] + P2[i:i+6]; i+=6
+            if p == 'L': scaled_path += ["L"] + P2[i:i+2]; i+=2
+        scaled_path = " ".join(scaled_path)
         return fr"""
         <svg height="50" width="50" viewBox="{ f"{mx-2} {my-2} {Mx-mx+4} {My-my+4}" }" xmlns="http://www.w3.org/2000/svg">
-        <path d="m 0 0 {path}"
+        <path d="m 0 0 {scaled_path}"
         style="fill:none;stroke:{self.groundColor};stroke-width:0.1" /></svg>"""
 
 
